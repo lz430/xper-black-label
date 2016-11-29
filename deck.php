@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body ng-app="black-label" ng-controller="MainController"> 
   <script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -22,30 +23,18 @@
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
   </script>
-  
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
-  <div class="container logo">
-    <img src="images/logo-black-label.png" alt="Lincoln Black Label">
+  <div class="container">
+    <ng-swippy collection='cardsCollection' width='{{size.width}}px' height='{{size.height}}px' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='2' label-ok='Cool' label-negative='Bad'></ng-swippy>
   </div>
-  
-  <div class="container hero">
-    <h1 class="font-Lincoln">What defines you?</h1>
-  </div>
-  <div class="container instruct">
-    <ul>
-      <li class="icon icon-arrow-right">
-        Swipe right for images that define your ideal lifestyle...
-      </li>
-      <li class="icon icon-arrow-left">
-        And left for images that don't.
-      </li>
-    </ul>
-  </div>
-  <div class="container cta">
-    <a href="" class="btn btn-continue">Continue</a>
-  </div>
-  
+
+
+  <!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="js/ng-swippy.js"></script>
+  <script src="js/angular-touch.js"></script>
+  <script src="js/controller.js"></script>
 </body>
 </html>

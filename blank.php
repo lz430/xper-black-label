@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="ngswippy.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body ng-app>
   <script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -22,30 +23,15 @@
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
   </script>
-  
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
-  <div class="container logo">
-    <img src="images/logo-black-label.png" alt="Lincoln Black Label">
-  </div>
   
-  <div class="container hero">
-    <h1 class="font-Lincoln">What defines you?</h1>
-  </div>
-  <div class="container instruct">
-    <ul>
-      <li class="icon icon-arrow-right">
-        Swipe right for images that define your ideal lifestyle...
-      </li>
-      <li class="icon icon-arrow-left">
-        And left for images that don't.
-      </li>
-    </ul>
-  </div>
-  <div class="container cta">
-    <a href="" class="btn btn-continue">Continue</a>
-  </div>
-  
+
+
+
+  <!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="ng-swippy.js"></script>
 </body>
 </html>
