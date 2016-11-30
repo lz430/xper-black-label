@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>Deck</title>
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -26,7 +26,7 @@
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
   <div class="container">
-    <ng-swippy collection='cardsCollection' width='{{size.width}}px' height='{{size.height}}px' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='2' label-ok='Cool' label-negative='Bad'></ng-swippy>
+    <ng-swippy collection='deck' width='{{size.width}}px' height='{{size.height}}px' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='2' label-ok='Cool' label-negative='Bad'></ng-swippy>
   </div>
 
 

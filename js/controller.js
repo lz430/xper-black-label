@@ -128,8 +128,28 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
       collection: 'Vineyard',
     },
   ];
+    var shuffleArray = function(array) {
+      var m = array.length, t, i;
+
+      // While there remain elements to shuffle
+      while (m) {
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+
+      return array;
+    };
+    $scope.deck = shuffleArray($scope.cardsCollection);
 
     $scope.myCustomFunction = function(){
+      console.log('clicked');
+      
+      console.log(shuffled);
       $timeout(function(){
         $scope.clickedTimes = $scope.clickedTimes + 1;
         $scope.actions.unshift({name: 'Click on item'});
