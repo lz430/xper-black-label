@@ -25,7 +25,17 @@
   </script>
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
-  <div class="container">
+  <div class="container deck">
+    <h1>Select 4</h1>
+    <div class="circles">
+      <ul>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
     <ng-swippy collection='deck' width='{{size.width}}px' height='{{size.height}}px' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='2' label-ok='Cool' label-negative='Bad'></ng-swippy>
   </div>
 

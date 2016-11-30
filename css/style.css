@@ -42,6 +42,17 @@ img {
   background-repeat: no-repeat;
   background-position: 0 -160px;
 }
+.circle {
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
+}
+.circle.checked {
+  background: url(../images/icon-check.png) no-repeat center center;
+  background-size: 50%;
+}
 body {
   background: #000;
   font-size: 100%;
@@ -82,5 +93,31 @@ h6 {
 .container.ng-swippy {
   margin: 0 auto;
   width: 300px;
+}
+.container.deck h1 {
+  color: #fff;
+  font-size: 250%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container.deck .circles {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+.container.deck .circles .circle {
+  display: inline-block;
+  margin: 0 25px;
+}
+.container.deck .circles .circle:first-of-type {
+  margin-left: 0;
+}
+.container.deck .circles .circle:last-of-type {
+  margin-right: 0;
 }
 

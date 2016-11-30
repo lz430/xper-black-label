@@ -147,9 +147,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
     $scope.deck = shuffleArray($scope.cardsCollection);
 
     $scope.myCustomFunction = function(){
-      console.log('clicked');
-      
-      console.log(shuffled);
       $timeout(function(){
         $scope.clickedTimes = $scope.clickedTimes + 1;
         $scope.actions.unshift({name: 'Click on item'});
@@ -178,6 +175,14 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
 
     $scope.swipeRight = function(person){
       $scope.actions.unshift({name: 'Right swipe'});
+      angular.forEach(person, function(v, k){
+        //This will count how many of each collection was swipped
+        $('.circles .circle').addClass('checked');
+        if(k === 'collection'){
+          console.log(v);
+        }
+      });
+      //This is where we grab the collection object 
     };
 
   });

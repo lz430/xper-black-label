@@ -114,7 +114,10 @@
   text-transform: uppercase;
   font-weight: 700;
 }
-
+.know-label,
+.dontknow-label{
+  display: none;
+}
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
