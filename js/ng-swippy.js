@@ -315,7 +315,7 @@ angular.module('ngSwippy', ['ngTouch'])
 							
 							scope.swipeObject.offsetX = 0;
 							scope.swipeObject.offsetY = 0;
-							console.log('Here we set false');
+							// console.log('Here we set false');
 							scope.$parent.isMoving = false;
 
 							$timeout(function(){			
@@ -330,7 +330,7 @@ angular.module('ngSwippy', ['ngTouch'])
 
 							$timeout(function(){
 								scope.$parent.isMoving = false;
-								console.log('Should be true, but: ' + swipeDirectiveValues.moveBack);
+								// console.log('Should be true, but: ' + swipeDirectiveValues.moveBack);
 								swipeDirectiveValues.moveBack = false;
 							}, 500);
 

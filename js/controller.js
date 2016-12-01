@@ -1,131 +1,131 @@
 angular.module('black-label', ['ngTouch', 'ngSwippy'])
-  .controller('MainController', function($scope, $timeout){
+  .controller('MainController', function($scope, $timeout, $window){
     $scope.cardsCollection = [{
       thumbnail: 'images/thor_01.jpg',
-      collection: 'Thoroughbred',
+      collection: 'thoroughbred',
     },{
       thumbnail: 'images/thor_02.jpg',
-      collection: 'Thoroughbred',
+      collection: 'thoroughbred',
     },{
       thumbnail: 'images/thor_03.jpg',
-      collection: 'Thoroughbred',
+      collection: 'thoroughbred',
     },{
       thumbnail: 'images/thor_04.jpg',
-      collection: 'Thoroughbred',
+      collection: 'thoroughbred',
     },{
       thumbnail: 'images/thor_05.jpg',
-      collection: 'Thoroughbred',
+      collection: 'thoroughbred',
     },{
       thumbnail: 'images/thor_06.jpg',
-      collection: 'Thoroughbred',
+      collection: 'thoroughbred',
     },{
       thumbnail: 'images/rhap_01.jpg',
-      collection: 'Rhapsody',
+      collection: 'rhapsody',
     },{
       thumbnail: 'images/rhap_02.jpg',
-      collection: 'Rhapsody',
+      collection: 'rhapsody',
     },{
       thumbnail: 'images/rhap_03.jpg',
-      collection: 'Rhapsody',
+      collection: 'rhapsody',
     },{
       thumbnail: 'images/rhap_04.jpg',
-      collection: 'Rhapsody',
+      collection: 'rhapsody',
     },{
       thumbnail: 'images/rhap_05.jpg',
-      collection: 'Rhapsody',
+      collection: 'rhapsody',
     },{
       thumbnail: 'images/rhap_06.jpg',
-      collection: 'Rhapsody',
+      collection: 'rhapsody',
     },{
       thumbnail: 'images/cha_01.jpg',
-      collection: 'Chalet',
+      collection: 'chalet',
     },{
       thumbnail: 'images/cha_02.jpg',
-      collection: 'Chalet',
+      collection: 'chalet',
     },{
       thumbnail: 'images/cha_03.jpg',
-      collection: 'Chalet',
+      collection: 'chalet',
     },{
       thumbnail: 'images/cha_04.jpg',
-      collection: 'Chalet',
+      collection: 'chalet',
     },{
       thumbnail: 'images/cha_05.jpg',
-      collection: 'Chalet',
+      collection: 'chalet',
     },{
       thumbnail: 'images/cha_06.jpg',
-      collection: 'Chalet',
+      collection: 'chalet',
     },{
       thumbnail: 'images/mod_01.jpg',
-      collection: 'Modern',
+      collection: 'modern',
     },{
       thumbnail: 'images/mod_02.jpg',
-      collection: 'Modern',
+      collection: 'modern',
     },{
       thumbnail: 'images/mod_03.jpg',
-      collection: 'Modern',
+      collection: 'modern',
     },{
       thumbnail: 'images/mod_04.jpg',
-      collection: 'Modern',
+      collection: 'modern',
     },{
       thumbnail: 'images/mod_05.jpg',
-      collection: 'Modern',
+      collection: 'modern',
     },{
       thumbnail: 'images/mod_06.jpg',
-      collection: 'Modern',
+      collection: 'modern',
     },{
       thumbnail: 'images/ind_01.jpg',
-      collection: 'Indulgence',
+      collection: 'indulgence',
     },{
       thumbnail: 'images/ind_02.jpg',
-      collection: 'Indulgence',
+      collection: 'indulgence',
     },{
       thumbnail: 'images/ind_03.jpg',
-      collection: 'Indulgence',
+      collection: 'indulgence',
     },{
       thumbnail: 'images/ind_04.jpg',
-      collection: 'Indulgence',
+      collection: 'indulgence',
     },{
       thumbnail: 'images/ind_05.jpg',
-      collection: 'Indulgence',
+      collection: 'indulgence',
     },{
       thumbnail: 'images/ind_06.jpg',
-      collection: 'Indulgence',
+      collection: 'indulgence',
     },{
       thumbnail: 'images/cnt_01.jpg',
-      collection: 'Center Stage',
+      collection: 'center-stage',
     },{
       thumbnail: 'images/cnt_02.jpg',
-      collection: 'Center Stage',
+      collection: 'center-stage',
     },{
       thumbnail: 'images/cnt_03.jpg',
-      collection: 'Center Stage',
+      collection: 'center-stage',
     },{
       thumbnail: 'images/cnt_04.jpg',
-      collection: 'Center Stage',
+      collection: 'center-stage',
     },{
       thumbnail: 'images/cnt_05.jpg',
-      collection: 'Center Stage',
+      collection: 'center-stage',
     },{
       thumbnail: 'images/cnt_06.jpg',
-      collection: 'Center Stage',
+      collection: 'center-stage',
     },{
       thumbnail: 'images/vin_01.jpg',
-      collection: 'Vineyard',
+      collection: 'vineyard',
     },{
       thumbnail: 'images/vin_02.jpg',
-      collection: 'Vineyard',
+      collection: 'vineyard',
     },{
       thumbnail: 'images/vin_03.jpg',
-      collection: 'Vineyard',
+      collection: 'vineyard',
     },{
       thumbnail: 'images/vin_04.jpg',
-      collection: 'Vineyard',
+      collection: 'vineyard',
     },{
       thumbnail: 'images/vin_05.jpg',
-      collection: 'Vineyard',
+      collection: 'vineyard',
     },{
       thumbnail: 'images/vin_06.jpg',
-      collection: 'Vineyard',
+      collection: 'vineyard',
     },
   ];
     var shuffleArray = function(array) {
@@ -186,7 +186,9 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
        };
      }
      if (collection && collection.right && collection.right >= 4) {
-       console.log("Collection '" + person.collection + "' has been swiped right 4 times!");
+      $window.location.href = 'theme-'+ person.collection +'.html';
+
+      console.log("Collection '" + person.collection + "' has been swiped right 4 times!");
      } else {
        person = $scope.deck[($scope.deck.indexOf(person) + 1) % $scope.deck.length];
      }
