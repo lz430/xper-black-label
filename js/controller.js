@@ -165,19 +165,41 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
 
     $scope.actions = [];
 
+    var swipes = {};
+    var $this = this;
+
     $scope.swipeLeft = function(person){
       $scope.actions.unshift({name: 'Left swipe'});
     };
 
     $scope.swipeRight = function(person){
+      if (swipes[person.collection]) {
+       var collection = swipes[person.collection];
+       if (collection.right) {
+         collection.right += 1;
+       } else {
+         collection.right = 1;
+       }
+     } else {
+       swipes[person.collection] = {
+         right: 1
+       };
+     }
+     if (collection && collection.right && collection.right >= 4) {
+       console.log("Collection '" + person.collection + "' has been swiped right 4 times!");
+     } else {
+       person = $scope.deck[($scope.deck.indexOf(person) + 1) % $scope.deck.length];
+     }
+
       $scope.actions.unshift({name: 'Right swipe'});
       angular.forEach(person, function(v, k){
         //This will count how many of each collection was swipped
-        $('.circles .circle').addClass('checked');
         if(k === 'collection'){
-          console.log(v);
+          //console.log(v);
         }
       });
+
+
       //This is where we grab the collection object 
     };
 
