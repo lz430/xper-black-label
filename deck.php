@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body ng-app="black-label" ng-controller="MainController"> 
+<body ng-app="black-label" ng-controller="MainController" style="overflow-x: hidden;"> 
   <script>
     window.fbAsyncInit = function() {
       FB.init({

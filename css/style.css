@@ -64,6 +64,12 @@ img {
   background: url(../images/icon-x.png) no-repeat center center;
   background-size: 50%;
 }
+.icon-like {
+  background: url(../images/icon-heart.png) no-repeat center center;
+  background-size: 50%;
+  height: 42.5px;
+  width: 94px;
+}
 body {
   background: #000;
   font-size: 100%;
@@ -140,5 +146,15 @@ h6 {
 }
 .container.deck .circles .circle:last-of-type {
   margin-right: 0;
+}
+.container.like-dislike {
+  margin-top: 50px;
+  width: 50%;
+}
+.container.like-dislike div {
+  float: left;
+}
+.container.like-dislike div:nth-child(2) {
+  float: right;
 }
 

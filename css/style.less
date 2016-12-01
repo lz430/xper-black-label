@@ -115,6 +115,15 @@ img{
   }
 }
 
+//Other icons
+.icon-like{
+  background: url(../images/icon-heart.png) no-repeat center center;
+  background-size: 50%;
+  height: 42.5px;
+  width: 94px;
+}
+
+
 // Main CSS
 body{
   background: @black;
@@ -199,6 +208,19 @@ h1, h2, h3, h4 ,h5 ,h6{
         &:last-of-type{
           margin-right: 0;
         }
+      }
+    }
+  }
+
+  &.like-dislike{
+    margin-top: 50px;
+    width: 50%;
+
+    div{
+      float: left;
+
+      &:nth-child(2){
+        float: right;
       }
     }
   }
