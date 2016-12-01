@@ -89,6 +89,13 @@ img{
   background-repeat: no-repeat;
   background-position: 0 -160px;
 }
+.back-arrow{
+  background: url(../images/icon-left-arrow.png) no-repeat center center;
+  background-size: 50%;
+  display: block;
+  height: 60px;
+  width: 30px;
+}
 
 //Circles
 .circle{
@@ -100,6 +107,10 @@ img{
 
   &.checked{
     background: url(../images/icon-check.png) no-repeat center center;
+    background-size: 50%;
+  }
+  &.x{
+    background: url(../images/icon-x.png) no-repeat center center;
     background-size: 50%;
   }
 }
@@ -117,8 +128,13 @@ h1, h2, h3, h4 ,h5 ,h6{
 .container{
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 767px;
+  max-width: 500px;
   width: 100%;
+
+  @media @mobile{
+    width: 85%;
+    padding: 0 5px;
+  }
   
   &.logo{
     img{
@@ -154,14 +170,17 @@ h1, h2, h3, h4 ,h5 ,h6{
     width: 300px;
   }
   &.deck{
+    padding: 25px 25px 0;
+
     h1{
       color: @white;
-      font-size: 250%;
+      font-size: 150%;
+      margin: 25px 0;
       text-align: center;
       text-transform: uppercase;
     }
     .circles{
-      margin: 0 auto;
+      margin: 0 auto 35px;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -172,8 +191,8 @@ h1, h2, h3, h4 ,h5 ,h6{
 
       .circle{
         display: inline-block;
-        margin: 0 25px;
-
+        margin: 0 15px;
+        
         &:first-of-type{
           margin-left: 0;
         }

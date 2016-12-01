@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Deck</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -26,17 +29,16 @@
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
   <div class="container deck">
+    <a href="index.php" class="icon back-arrow"></a>
     <h1>Select 4</h1>
-    <div class="circles">
-      <ul>
-        <li class="circle"></li>
-        <li class="circle"></li>
-        <li class="circle"></li>
-        <li class="circle"></li>
-      </ul>
-    </div>
+    <ul class="circles">
+      <li class="circle"></li>
+      <li class="circle"></li>
+      <li class="circle"></li>
+      <li class="circle"></li>
+    </ul>
     <div class="clearfix"></div>
-    <ng-swippy collection='deck' width='{{size.width}}px' height='{{size.height}}px' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='2' label-ok='Cool' label-negative='Bad'></ng-swippy>
+    <ng-swippy collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='5' label-ok='Cool' label-negative='Bad'></ng-swippy>
   </div>
 
 

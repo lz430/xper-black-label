@@ -154,10 +154,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
       
     };
 
-    $scope.size = {
-      width: 300,
-      height: 400
-    };
 
     $scope.showinfo = true;
 

@@ -42,6 +42,13 @@ img {
   background-repeat: no-repeat;
   background-position: 0 -160px;
 }
+.back-arrow {
+  background: url(../images/icon-left-arrow.png) no-repeat center center;
+  background-size: 50%;
+  display: block;
+  height: 60px;
+  width: 30px;
+}
 .circle {
   background: #000;
   border: 2px solid #fff;
@@ -51,6 +58,10 @@ img {
 }
 .circle.checked {
   background: url(../images/icon-check.png) no-repeat center center;
+  background-size: 50%;
+}
+.circle.x {
+  background: url(../images/icon-x.png) no-repeat center center;
   background-size: 50%;
 }
 body {
@@ -68,8 +79,14 @@ h6 {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 767px;
+  max-width: 500px;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 85%;
+    padding: 0 5px;
+  }
 }
 .container.logo img {
   display: block;
@@ -94,14 +111,18 @@ h6 {
   margin: 0 auto;
   width: 300px;
 }
+.container.deck {
+  padding: 25px 25px 0;
+}
 .container.deck h1 {
   color: #fff;
-  font-size: 250%;
+  font-size: 150%;
+  margin: 25px 0;
   text-align: center;
   text-transform: uppercase;
 }
 .container.deck .circles {
-  margin: 0 auto;
+  margin: 0 auto 35px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -112,7 +133,7 @@ h6 {
 }
 .container.deck .circles .circle {
   display: inline-block;
-  margin: 0 25px;
+  margin: 0 15px;
 }
 .container.deck .circles .circle:first-of-type {
   margin-left: 0;

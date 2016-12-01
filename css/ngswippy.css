@@ -35,6 +35,8 @@
 .ng-swippy {
   margin: 0 auto;
 	position: relative;
+  height: 367px;
+  width: 367px;
 }
 
 .progress-stats {
