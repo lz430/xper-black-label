@@ -169,40 +169,54 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
     var $this = this;
 
     $scope.swipeLeft = function(person){
+      //Essentially do nothing
       $scope.actions.unshift({name: 'Left swipe'});
     };
 
     $scope.swipeRight = function(person){
-      if (swipes[person.collection]) {
-       var collection = swipes[person.collection];
-       if (collection.right) {
-         collection.right += 1;
-       } else {
-         collection.right = 1;
-       }
-     } else {
-       swipes[person.collection] = {
-         right: 1
-       };
-     }
-     if (collection && collection.right && collection.right >= 4) {
-      $window.location.href = 'theme-'+ person.collection +'.html';
-
-      console.log("Collection '" + person.collection + "' has been swiped right 4 times!");
-     } else {
-       person = $scope.deck[($scope.deck.indexOf(person) + 1) % $scope.deck.length];
-     }
-
       $scope.actions.unshift({name: 'Right swipe'});
+
+      if (swipes[person.collection]) {
+        var collection = swipes[person.collection];
+        if (collection.right) {
+         collection.right += 1;
+        } else {
+         collection.right = 1;
+        }
+      } else {
+        swipes[person.collection] = {
+         right: 1
+        };
+      }
+      
+
+      if (collection && collection.right && collection.right >= 4) {
+        //$window.location.href = 'theme-'+ person.collection +'.html';
+
+        // console.log("Collection '" + person.collection + "' has been swiped right 4 times!");
+      } else {
+       person = $scope.deck[($scope.deck.indexOf(person) + 1) % $scope.deck.length];
+      }
+
+      var circles = $('.circles');
+      $('.circle').each(function(){
+        if (!$(this).hasClass('checked')){
+          $(this).addClass('checked')
+          return false;
+        }
+      });
+      angular.forEach(circles, function(i){
+        //How many times did they swipe
+        var swipes = $scope.actions.length;
+      });
+
       angular.forEach(person, function(v, k){
         //This will count how many of each collection was swipped
         if(k === 'collection'){
           //console.log(v);
         }
       });
-
-
-      //This is where we grab the collection object 
-    };
+    };//end swipeRight
+      
 
   });
