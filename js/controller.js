@@ -1,130 +1,130 @@
 angular.module('black-label', ['ngTouch', 'ngSwippy'])
   .controller('MainController', function($scope, $timeout, $window){
     $scope.cardsCollection = [{
-      thumbnail: 'images/thor_01.jpg',
+      thumbnail: 'images/deck/thor_01.jpg',
       collection: 'thoroughbred',
     },{
-      thumbnail: 'images/thor_02.jpg',
+      thumbnail: 'images/deck/thor_02.jpg',
       collection: 'thoroughbred',
     },{
-      thumbnail: 'images/thor_03.jpg',
+      thumbnail: 'images/deck/thor_03.jpg',
       collection: 'thoroughbred',
     },{
-      thumbnail: 'images/thor_04.jpg',
+      thumbnail: 'images/deck/thor_04.jpg',
       collection: 'thoroughbred',
     },{
-      thumbnail: 'images/thor_05.jpg',
+      thumbnail: 'images/deck/thor_05.jpg',
       collection: 'thoroughbred',
     },{
-      thumbnail: 'images/thor_06.jpg',
+      thumbnail: 'images/deck/thor_06.jpg',
       collection: 'thoroughbred',
     },{
-      thumbnail: 'images/rhap_01.jpg',
+      thumbnail: 'images/deck/rhap_01.jpg',
       collection: 'rhapsody',
     },{
-      thumbnail: 'images/rhap_02.jpg',
+      thumbnail: 'images/deck/rhap_02.jpg',
       collection: 'rhapsody',
     },{
-      thumbnail: 'images/rhap_03.jpg',
+      thumbnail: 'images/deck/rhap_03.jpg',
       collection: 'rhapsody',
     },{
-      thumbnail: 'images/rhap_04.jpg',
+      thumbnail: 'images/deck/rhap_04.jpg',
       collection: 'rhapsody',
     },{
-      thumbnail: 'images/rhap_05.jpg',
+      thumbnail: 'images/deck/rhap_05.jpg',
       collection: 'rhapsody',
     },{
-      thumbnail: 'images/rhap_06.jpg',
+      thumbnail: 'images/deck/rhap_06.jpg',
       collection: 'rhapsody',
     },{
-      thumbnail: 'images/cha_01.jpg',
+      thumbnail: 'images/deck/cha_01.jpg',
       collection: 'chalet',
     },{
-      thumbnail: 'images/cha_02.jpg',
+      thumbnail: 'images/deck/cha_02.jpg',
       collection: 'chalet',
     },{
-      thumbnail: 'images/cha_03.jpg',
+      thumbnail: 'images/deck/cha_03.jpg',
       collection: 'chalet',
     },{
-      thumbnail: 'images/cha_04.jpg',
+      thumbnail: 'images/deck/cha_04.jpg',
       collection: 'chalet',
     },{
-      thumbnail: 'images/cha_05.jpg',
+      thumbnail: 'images/deck/cha_05.jpg',
       collection: 'chalet',
     },{
-      thumbnail: 'images/cha_06.jpg',
+      thumbnail: 'images/deck/cha_06.jpg',
       collection: 'chalet',
     },{
-      thumbnail: 'images/mod_01.jpg',
+      thumbnail: 'images/deck/mod_01.jpg',
       collection: 'modern',
     },{
-      thumbnail: 'images/mod_02.jpg',
+      thumbnail: 'images/deck/mod_02.jpg',
       collection: 'modern',
     },{
-      thumbnail: 'images/mod_03.jpg',
+      thumbnail: 'images/deck/mod_03.jpg',
       collection: 'modern',
     },{
-      thumbnail: 'images/mod_04.jpg',
+      thumbnail: 'images/deck/mod_04.jpg',
       collection: 'modern',
     },{
-      thumbnail: 'images/mod_05.jpg',
+      thumbnail: 'images/deck/mod_05.jpg',
       collection: 'modern',
     },{
-      thumbnail: 'images/mod_06.jpg',
+      thumbnail: 'images/deck/mod_06.jpg',
       collection: 'modern',
     },{
-      thumbnail: 'images/ind_01.jpg',
+      thumbnail: 'images/deck/ind_01.jpg',
       collection: 'indulgence',
     },{
-      thumbnail: 'images/ind_02.jpg',
+      thumbnail: 'images/deck/ind_02.jpg',
       collection: 'indulgence',
     },{
-      thumbnail: 'images/ind_03.jpg',
+      thumbnail: 'images/deck/ind_03.jpg',
       collection: 'indulgence',
     },{
-      thumbnail: 'images/ind_04.jpg',
+      thumbnail: 'images/deck/ind_04.jpg',
       collection: 'indulgence',
     },{
-      thumbnail: 'images/ind_05.jpg',
+      thumbnail: 'images/deck/ind_05.jpg',
       collection: 'indulgence',
     },{
-      thumbnail: 'images/ind_06.jpg',
+      thumbnail: 'images/deck/ind_06.jpg',
       collection: 'indulgence',
     },{
-      thumbnail: 'images/cnt_01.jpg',
+      thumbnail: 'images/deck/cnt_01.jpg',
       collection: 'center-stage',
     },{
-      thumbnail: 'images/cnt_02.jpg',
+      thumbnail: 'images/deck/cnt_02.jpg',
       collection: 'center-stage',
     },{
-      thumbnail: 'images/cnt_03.jpg',
+      thumbnail: 'images/deck/cnt_03.jpg',
       collection: 'center-stage',
     },{
-      thumbnail: 'images/cnt_04.jpg',
+      thumbnail: 'images/deck/cnt_04.jpg',
       collection: 'center-stage',
     },{
-      thumbnail: 'images/cnt_05.jpg',
+      thumbnail: 'images/deck/cnt_05.jpg',
       collection: 'center-stage',
     },{
-      thumbnail: 'images/cnt_06.jpg',
+      thumbnail: 'images/deck/cnt_06.jpg',
       collection: 'center-stage',
     },{
-      thumbnail: 'images/vin_01.jpg',
+      thumbnail: 'images/deck/vin_01.jpg',
       collection: 'vineyard',
     },{
-      thumbnail: 'images/vin_02.jpg',
+      thumbnail: 'images/deck/vin_02.jpg',
       collection: 'vineyard',
     },{
-      thumbnail: 'images/vin_03.jpg',
+      thumbnail: 'images/deck/vin_03.jpg',
       collection: 'vineyard',
     },{
-      thumbnail: 'images/vin_04.jpg',
+      thumbnail: 'images/deck/vin_04.jpg',
       collection: 'vineyard',
     },{
-      thumbnail: 'images/vin_05.jpg',
+      thumbnail: 'images/deck/vin_05.jpg',
       collection: 'vineyard',
     },{
-      thumbnail: 'images/vin_06.jpg',
+      thumbnail: 'images/deck/vin_06.jpg',
       collection: 'vineyard',
     },
   ];
