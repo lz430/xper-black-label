@@ -193,7 +193,10 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
 
       // if (collection && collection.right && collection.right >= 4) {
         if(counter === 4){
-          console.log('4 times swiped');
+
+
+
+
         // $window.location.href = 'theme-'+ person.collection +'.html';
 
         // console.log("Collection '" + person.collection + "' has been swiped right 4 times!");
@@ -201,6 +204,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
        person = $scope.deck[($scope.deck.indexOf(person) + 1) % $scope.deck.length];
       }
 
+      // Checking the circles
       var circles = $('.circles');
       $('.circle').each(function(){
         if (!$(this).hasClass('checked')){
@@ -209,6 +213,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
         }
       });
 
+      // Count the number of right swipes
       $(this).each(function(){
         console.log(counter);
         counter++;
