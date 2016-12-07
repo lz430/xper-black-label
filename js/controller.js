@@ -155,7 +155,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
     };
 
 
-    $scope.showinfo = true;
+    $scope.showinfo = false;
 
     $scope.swipeend = function(){
       $scope.actions.unshift({name: 'Collection Empty'});
@@ -165,6 +165,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
 
     $scope.actions = [];
 
+    var counter = 1;
     var swipes = {};
     var $this = this;
 
@@ -190,8 +191,10 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
       }
       
 
-      if (collection && collection.right && collection.right >= 4) {
-        //$window.location.href = 'theme-'+ person.collection +'.html';
+      // if (collection && collection.right && collection.right >= 4) {
+        if(counter === 4){
+          console.log('4 times swiped');
+        // $window.location.href = 'theme-'+ person.collection +'.html';
 
         // console.log("Collection '" + person.collection + "' has been swiped right 4 times!");
       } else {
@@ -205,18 +208,13 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
           return false;
         }
       });
-      angular.forEach(circles, function(i){
-        //How many times did they swipe
-        var swipes = $scope.actions.length;
+
+      $(this).each(function(){
+        console.log(counter);
+        counter++;
       });
 
-      angular.forEach(person, function(v, k){
-        //This will count how many of each collection was swipped
-        if(k === 'collection'){
-          //console.log(v);
-        }
-      });
     };//end swipeRight
-      
 
+    
   });
