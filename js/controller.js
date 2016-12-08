@@ -1,188 +1,232 @@
 angular.module('black-label', ['ngTouch', 'ngSwippy'])
-  .controller('MainController', function($scope, $timeout){
-    $scope.cardsCollection = [{
-      thumbnail: 'images/thor_01.jpg',
-      collection: 'Thoroughbred',
-    },{
-      thumbnail: 'images/thor_02.jpg',
-      collection: 'Thoroughbred',
-    },{
-      thumbnail: 'images/thor_03.jpg',
-      collection: 'Thoroughbred',
-    },{
-      thumbnail: 'images/thor_04.jpg',
-      collection: 'Thoroughbred',
-    },{
-      thumbnail: 'images/thor_05.jpg',
-      collection: 'Thoroughbred',
-    },{
-      thumbnail: 'images/thor_06.jpg',
-      collection: 'Thoroughbred',
-    },{
-      thumbnail: 'images/rhap_01.jpg',
-      collection: 'Rhapsody',
-    },{
-      thumbnail: 'images/rhap_02.jpg',
-      collection: 'Rhapsody',
-    },{
-      thumbnail: 'images/rhap_03.jpg',
-      collection: 'Rhapsody',
-    },{
-      thumbnail: 'images/rhap_04.jpg',
-      collection: 'Rhapsody',
-    },{
-      thumbnail: 'images/rhap_05.jpg',
-      collection: 'Rhapsody',
-    },{
-      thumbnail: 'images/rhap_06.jpg',
-      collection: 'Rhapsody',
-    },{
-      thumbnail: 'images/cha_01.jpg',
-      collection: 'Chalet',
-    },{
-      thumbnail: 'images/cha_02.jpg',
-      collection: 'Chalet',
-    },{
-      thumbnail: 'images/cha_03.jpg',
-      collection: 'Chalet',
-    },{
-      thumbnail: 'images/cha_04.jpg',
-      collection: 'Chalet',
-    },{
-      thumbnail: 'images/cha_05.jpg',
-      collection: 'Chalet',
-    },{
-      thumbnail: 'images/cha_06.jpg',
-      collection: 'Chalet',
-    },{
-      thumbnail: 'images/mod_01.jpg',
-      collection: 'Modern',
-    },{
-      thumbnail: 'images/mod_02.jpg',
-      collection: 'Modern',
-    },{
-      thumbnail: 'images/mod_03.jpg',
-      collection: 'Modern',
-    },{
-      thumbnail: 'images/mod_04.jpg',
-      collection: 'Modern',
-    },{
-      thumbnail: 'images/mod_05.jpg',
-      collection: 'Modern',
-    },{
-      thumbnail: 'images/mod_06.jpg',
-      collection: 'Modern',
-    },{
-      thumbnail: 'images/ind_01.jpg',
-      collection: 'Indulgence',
-    },{
-      thumbnail: 'images/ind_02.jpg',
-      collection: 'Indulgence',
-    },{
-      thumbnail: 'images/ind_03.jpg',
-      collection: 'Indulgence',
-    },{
-      thumbnail: 'images/ind_04.jpg',
-      collection: 'Indulgence',
-    },{
-      thumbnail: 'images/ind_05.jpg',
-      collection: 'Indulgence',
-    },{
-      thumbnail: 'images/ind_06.jpg',
-      collection: 'Indulgence',
-    },{
-      thumbnail: 'images/cnt_01.jpg',
-      collection: 'Center Stage',
-    },{
-      thumbnail: 'images/cnt_02.jpg',
-      collection: 'Center Stage',
-    },{
-      thumbnail: 'images/cnt_03.jpg',
-      collection: 'Center Stage',
-    },{
-      thumbnail: 'images/cnt_04.jpg',
-      collection: 'Center Stage',
-    },{
-      thumbnail: 'images/cnt_05.jpg',
-      collection: 'Center Stage',
-    },{
-      thumbnail: 'images/cnt_06.jpg',
-      collection: 'Center Stage',
-    },{
-      thumbnail: 'images/vin_01.jpg',
-      collection: 'Vineyard',
-    },{
-      thumbnail: 'images/vin_02.jpg',
-      collection: 'Vineyard',
-    },{
-      thumbnail: 'images/vin_03.jpg',
-      collection: 'Vineyard',
-    },{
-      thumbnail: 'images/vin_04.jpg',
-      collection: 'Vineyard',
-    },{
-      thumbnail: 'images/vin_05.jpg',
-      collection: 'Vineyard',
-    },{
-      thumbnail: 'images/vin_06.jpg',
-      collection: 'Vineyard',
-    },
-  ];
-    var shuffleArray = function(array) {
-      var m = array.length, t, i;
+    .controller('MainController', function($scope, $timeout, $window) {
+        $scope.cardsCollection = [{
+            thumbnail: 'images/deck/thor_01.jpg',
+            collection: 'thoroughbred',
+        }, {
+            thumbnail: 'images/deck/thor_02.jpg',
+            collection: 'thoroughbred',
+        }, {
+            thumbnail: 'images/deck/thor_03.jpg',
+            collection: 'thoroughbred',
+        }, {
+            thumbnail: 'images/deck/thor_04.jpg',
+            collection: 'thoroughbred',
+        }, {
+            thumbnail: 'images/deck/thor_05.jpg',
+            collection: 'thoroughbred',
+        }, {
+            thumbnail: 'images/deck/thor_06.jpg',
+            collection: 'thoroughbred',
+        }, {
+            thumbnail: 'images/deck/rhap_01.jpg',
+            collection: 'rhapsody',
+        }, {
+            thumbnail: 'images/deck/rhap_02.jpg',
+            collection: 'rhapsody',
+        }, {
+            thumbnail: 'images/deck/rhap_03.jpg',
+            collection: 'rhapsody',
+        }, {
+            thumbnail: 'images/deck/rhap_04.jpg',
+            collection: 'rhapsody',
+        }, {
+            thumbnail: 'images/deck/rhap_05.jpg',
+            collection: 'rhapsody',
+        }, {
+            thumbnail: 'images/deck/rhap_06.jpg',
+            collection: 'rhapsody',
+        }, {
+            thumbnail: 'images/deck/cha_01.jpg',
+            collection: 'chalet',
+        }, {
+            thumbnail: 'images/deck/cha_02.jpg',
+            collection: 'chalet',
+        }, {
+            thumbnail: 'images/deck/cha_03.jpg',
+            collection: 'chalet',
+        }, {
+            thumbnail: 'images/deck/cha_04.jpg',
+            collection: 'chalet',
+        }, {
+            thumbnail: 'images/deck/cha_05.jpg',
+            collection: 'chalet',
+        }, {
+            thumbnail: 'images/deck/cha_06.jpg',
+            collection: 'chalet',
+        }, {
+            thumbnail: 'images/deck/mod_01.jpg',
+            collection: 'modern',
+        }, {
+            thumbnail: 'images/deck/mod_02.jpg',
+            collection: 'modern',
+        }, {
+            thumbnail: 'images/deck/mod_03.jpg',
+            collection: 'modern',
+        }, {
+            thumbnail: 'images/deck/mod_04.jpg',
+            collection: 'modern',
+        }, {
+            thumbnail: 'images/deck/mod_05.jpg',
+            collection: 'modern',
+        }, {
+            thumbnail: 'images/deck/mod_06.jpg',
+            collection: 'modern',
+        }, {
+            thumbnail: 'images/deck/ind_01.jpg',
+            collection: 'indulgence',
+        }, {
+            thumbnail: 'images/deck/ind_02.jpg',
+            collection: 'indulgence',
+        }, {
+            thumbnail: 'images/deck/ind_03.jpg',
+            collection: 'indulgence',
+        }, {
+            thumbnail: 'images/deck/ind_04.jpg',
+            collection: 'indulgence',
+        }, {
+            thumbnail: 'images/deck/ind_05.jpg',
+            collection: 'indulgence',
+        }, {
+            thumbnail: 'images/deck/ind_06.jpg',
+            collection: 'indulgence',
+        }, {
+            thumbnail: 'images/deck/cnt_01.jpg',
+            collection: 'center-stage',
+        }, {
+            thumbnail: 'images/deck/cnt_02.jpg',
+            collection: 'center-stage',
+        }, {
+            thumbnail: 'images/deck/cnt_03.jpg',
+            collection: 'center-stage',
+        }, {
+            thumbnail: 'images/deck/cnt_04.jpg',
+            collection: 'center-stage',
+        }, {
+            thumbnail: 'images/deck/cnt_05.jpg',
+            collection: 'center-stage',
+        }, {
+            thumbnail: 'images/deck/cnt_06.jpg',
+            collection: 'center-stage',
+        }, {
+            thumbnail: 'images/deck/vin_01.jpg',
+            collection: 'vineyard',
+        }, {
+            thumbnail: 'images/deck/vin_02.jpg',
+            collection: 'vineyard',
+        }, {
+            thumbnail: 'images/deck/vin_03.jpg',
+            collection: 'vineyard',
+        }, {
+            thumbnail: 'images/deck/vin_04.jpg',
+            collection: 'vineyard',
+        }, {
+            thumbnail: 'images/deck/vin_05.jpg',
+            collection: 'vineyard',
+        }, {
+            thumbnail: 'images/deck/vin_06.jpg',
+            collection: 'vineyard',
+        }, ];
+        var shuffleArray = function(array) {
+            var m = array.length,
+                t, i;
+            // While there remain elements to shuffle
+            while (m) {
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+                // And swap it with the current element.
+                t = array[m];
+                array[m] = array[i];
+                array[i] = t;
+            }
+            return array;
+        };
+        $scope.deck = shuffleArray($scope.cardsCollection);
+        $scope.myCustomFunction = function() {
+            $timeout(function() {
+                $scope.clickedTimes = $scope.clickedTimes + 1;
+                $scope.actions.unshift({ name: 'Click on item' });
+            });
+        };
+        $scope.showinfo = false;
+        $scope.swipeend = function() {
+            $scope.actions.unshift({ name: 'Collection Empty' });
+        };
+        $scope.clickedTimes = 0;
+        $scope.actions = [];
+        $scope.picks = [];
+        var counter = 0;
+        var swipes = {};
+        var picks = [];
+        var counts = [];
+        var $this = this;
+        $scope.swipeLeft = function(person) {
+            //Essentially do nothing
+            $scope.actions.unshift({ name: 'Left swipe' });
+        };
+        $scope.swipeRight = function(person) {
+          $scope.actions.unshift({ name: 'Right swipe' });
+          
+          // Count the number of right swipes
+            $(this).each(function() {
+              return counter++;
+            });
+          // Checking the circles
+          $('.circle').each(function() {
+              if (!$(this).hasClass('checked')) {
+                  $(this).addClass('checked')
+                  return false;
+              }
+          });
+          $scope.picks.push(person.collection);
+          console.log('Picks: ' + $scope.picks);
+          console.log("Counter: " + counter);
+          if (counter === 4){
+            // Calculate and store the frequency of each swipe
+            var frequency = $scope.picks.reduce(function(frequency, swipe){
+              var sofar = frequency[swipe];
+              if(!sofar){
+                frequency[swipe] = 1;
+              } else {
+                frequency[swipe] = frequency[swipe] + 1;
+              }
+              return frequency;
+            }, {}); 
+            
+            var max = Math.max.apply(null, Object.values(frequency)); // most frequent
+            // find key for the most frequent value
+            var winner = Object.keys(frequency).find(element => frequency[element] == max);
 
-      // While there remain elements to shuffle
-      while (m) {
-        // Pick a remaining element…
-        i = Math.floor(Math.random() * m--);
-
-        // And swap it with the current element.
-        t = array[m];
-        array[m] = array[i];
-        array[i] = t;
-      }
-
-      return array;
-    };
-    $scope.deck = shuffleArray($scope.cardsCollection);
-
-    $scope.myCustomFunction = function(){
-      $timeout(function(){
-        $scope.clickedTimes = $scope.clickedTimes + 1;
-        $scope.actions.unshift({name: 'Click on item'});
-      });
-      
-    };
-
-    $scope.size = {
-      width: 300,
-      height: 400
-    };
-
-    $scope.showinfo = true;
-
-    $scope.swipeend = function(){
-      $scope.actions.unshift({name: 'Collection Empty'});
-    };
-
-    $scope.clickedTimes = 0;
-
-    $scope.actions = [];
-
-    $scope.swipeLeft = function(person){
-      $scope.actions.unshift({name: 'Left swipe'});
-    };
-
-    $scope.swipeRight = function(person){
-      $scope.actions.unshift({name: 'Right swipe'});
-      angular.forEach(person, function(v, k){
-        //This will count how many of each collection was swipped
-        $('.circles .circle').addClass('checked');
-        if(k === 'collection'){
-          console.log(v);
-        }
-      });
-      //This is where we grab the collection object 
-    };
-
-  });
+            $window.location.href = 'theme-'+ winner +'.html';
+            
+            // var theme = "";
+            // switch (winner == theme) {
+            //   case 0:
+            //     theme = "thoroughbred";
+            //     break;
+            //   case 1:
+            //     theme = "rhapsody";
+            //     break;
+            //   case 2:
+            //     theme = "chalet";
+            //     break;
+            //   case 3:
+            //     theme = "modern";
+            //     break;
+            //   case 4:
+            //     theme = "indulgence";
+            //     break;
+            //   case 5:
+            //     theme = "center-stage";
+            //     break;
+            //   case 6:
+            //     theme = "vineyard";
+            //     break;
+            //   default:
+            //     theme = "blank";
+            //     break;
+            // }
+            
+          } //end 4 swipes
+      }; //end swipeRight
+    });
