@@ -127,12 +127,14 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             thumbnail: 'images/deck/vin_06.jpg',
             collection: 'vineyard',
         }, ];
+        
+        // Do the shuffle
         var shuffleArray = function(array) {
             var m = array.length,
                 t, i;
             // While there remain elements to shuffle
             while (m) {
-                // Pick a remaining element…
+                // Pick a remaining element
                 i = Math.floor(Math.random() * m--);
                 // And swap it with the current element.
                 t = array[m];
@@ -141,6 +143,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             }
             return array;
         };
+
         $scope.deck = shuffleArray($scope.cardsCollection);
         $scope.myCustomFunction = function() {
             $timeout(function() {
@@ -149,39 +152,47 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             });
         };
         $scope.showinfo = false;
-        $scope.swipeend = function() {
-            $scope.actions.unshift({ name: 'Collection Empty' });
-        };
+        
         $scope.clickedTimes = 0;
         $scope.actions = [];
         $scope.picks = [];
-        var counter = 0;
+        var counterRight = 0;
+        var counterLeft = 0;
         var swipes = {};
         var picks = [];
         var counts = [];
         var $this = this;
+
+        $scope.swipeend = function() {
+            $scope.actions.unshift({ name: 'Collection Empty' });
+            $window.location.href = 'theme-default.html';
+        };
         $scope.swipeLeft = function(person) {
             //Essentially do nothing
             $scope.actions.unshift({ name: 'Left swipe' });
+            $(this).each(function() {
+              return counterLeft++;
+            });
+
         };
         $scope.swipeRight = function(person) {
           $scope.actions.unshift({ name: 'Right swipe' });
           
           // Count the number of right swipes
-            $(this).each(function() {
-              return counter++;
-            });
+          $(this).each(function() {
+            return counterRight++;
+          });
           // Checking the circles
           $('.circle').each(function() {
-              if (!$(this).hasClass('checked')) {
-                  $(this).addClass('checked')
-                  return false;
-              }
+            if (!$(this).hasClass('checked')) {
+                $(this).addClass('checked');
+                return false;
+            }
           });
           $scope.picks.push(person.collection);
           console.log('Picks: ' + $scope.picks);
-          console.log("Counter: " + counter);
-          if (counter === 4){
+          console.log("Counter: " + counterRight);
+          if (counterRight === 4){
             // Calculate and store the frequency of each swipe
             var frequency = $scope.picks.reduce(function(frequency, swipe){
               var sofar = frequency[swipe];
@@ -198,7 +209,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             var winner = Object.keys(frequency).find(element => frequency[element] == max);
             $window.location.href = 'theme-'+ winner +'.html';
 
-            
           } //end 4 swipes
       }; //end swipeRight
     });
