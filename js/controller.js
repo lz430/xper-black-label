@@ -196,36 +196,8 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             var max = Math.max.apply(null, Object.values(frequency)); // most frequent
             // find key for the most frequent value
             var winner = Object.keys(frequency).find(element => frequency[element] == max);
-
             $window.location.href = 'theme-'+ winner +'.html';
-            
-            // var theme = "";
-            // switch (winner == theme) {
-            //   case 0:
-            //     theme = "thoroughbred";
-            //     break;
-            //   case 1:
-            //     theme = "rhapsody";
-            //     break;
-            //   case 2:
-            //     theme = "chalet";
-            //     break;
-            //   case 3:
-            //     theme = "modern";
-            //     break;
-            //   case 4:
-            //     theme = "indulgence";
-            //     break;
-            //   case 5:
-            //     theme = "center-stage";
-            //     break;
-            //   case 6:
-            //     theme = "vineyard";
-            //     break;
-            //   default:
-            //     theme = "blank";
-            //     break;
-            // }
+
             
           } //end 4 swipes
       }; //end swipeRight
