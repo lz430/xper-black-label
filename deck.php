@@ -38,7 +38,7 @@
       <li class="circle"></li>
     </ul>
     <div class="clearfix"></div>
-    <ng-swippy collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='5' label-ok='Cool' label-negative='Bad'></ng-swippy>
+    <ng-swippy collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='4' label-ok='Cool' label-negative='Bad'></ng-swippy>
   </div>
   <!-- Scripts -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>

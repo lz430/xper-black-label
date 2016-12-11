@@ -1,24 +1,23 @@
-<div class="ng-swippy noselect">
-<div person="person" swipe-directive="swipe-directive" ng-repeat="person in peopleToShow" class="content-wrapper swipable-card">
-    <div class="card">
-        <div style="background: url({{person.thumbnail}}) no-repeat 50% 15%" class="photo-item"></div>
-        <div class="know-label">{{labelOk ? labelOk : "YES"}}</div>
-        <div class="dontknow-label">{{labelNegative ? labelNegative : "NO"}}</div>
-    </div>
-    <div class="progress-stats" ng-if="data">
-        <div class="card-shown">
-            <div class="card-shown-text">{{person.collection}}</div>
-            <div class="card-shown-number">{{person.subtitle}}</div>
-        </div>
-        <div class="card-number">{{collection.length - (collection.indexOf(person))}}/{{collection.length}}&nbsp;
-        </div>
-    </div>
-    <div class="container like-dislike">
-        <div class="circle x"></div>
-        <div class="icon-like"></div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<!-- end person-->
-</div>
+<div class="ng-swippy noselect">
+    <div person="person" swipe-directive="swipe-directive" ng-repeat="person in peopleToShow" class="content-wrapper swipable-card">
+      <div class="card">
+          <div style="background: url({{person.thumbnail}}) no-repeat 50% 15%" class="photo-item"></div>
+          <div class="know-label">{{labelOk ? labelOk : "YES"}}</div>
+          <div class="dontknow-label">{{labelNegative ? labelNegative : "NO"}}</div>
+      </div>
+      <div class="progress-stats" ng-if="data">
+          <div class="card-shown">
+              <div class="card-shown-text">{{person.collection}}</div>
+              <div class="card-shown-number">{{person.subtitle}}</div>
+          </div>
+          <div class="card-number">{{collection.length - (collection.indexOf(person))}}/{{collection.length}}&nbsp;
+          </div>
+      </div>
+      <div class="container like-dislike" >
+        <div class="circle x" ng-click="clickDisike()"></div>
+        <div class="icon-like" ng-click="clickLike()"></div>
+        <div class="clearfix"></div>
+      </div>
+    </div><!-- end person-->
+    <div class="clearfix"></div>
+</div>
