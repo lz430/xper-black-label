@@ -39,11 +39,11 @@
 //Theme colors
 @center-stage: #802f2c;
 @chalet      : #b8a898;
-@indulgence  : ;
-@modern      : ;
-@rhapsody    : ;
-@thoroughbred: ;
-@vineyard    : ;
+@indulgence  : #5f3c30;
+@modern      : #d3ccbc;
+@rhapsody    : #1a355e;
+@thoroughbred: #703c2e;
+@vineyard    : #6b1a31;
 
 
 // Media Queries
@@ -223,10 +223,11 @@ h1, h2, h3, h4 ,h5 ,h6{
   }
 
   &.like-dislike{
-    margin-top: 50px;
-    width: 50%;
-    position: absolute;
     bottom: -100px;
+    margin-top: 50px;
+    left: 25%;
+    position: absolute;
+    width: 50%;
 
     div{
       float: left;
@@ -243,7 +244,7 @@ h1, h2, h3, h4 ,h5 ,h6{
   padding-bottom: 15px;
 
   &.center-stage{
-    background: @chalet;
+    background: @center-stage;
   }
   &.chalet{
     background: @chalet;

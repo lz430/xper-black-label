@@ -156,10 +156,11 @@ h6 {
   margin-right: 0;
 }
 .container.like-dislike {
-  margin-top: 50px;
-  width: 50%;
-  position: absolute;
   bottom: -100px;
+  margin-top: 50px;
+  left: 25%;
+  position: absolute;
+  width: 50%;
 }
 .container.like-dislike div {
   float: left;
@@ -172,25 +173,25 @@ h6 {
   padding-bottom: 15px;
 }
 .theme.center-stage {
-  background: #b8a898;
+  background: #802f2c;
 }
 .theme.chalet {
   background: #b8a898;
 }
 .theme.indulgence {
-  background: ;
+  background: #5f3c30;
 }
 .theme.modern {
-  background: ;
+  background: #d3ccbc;
 }
 .theme.rhapsody {
-  background: ;
+  background: #1a355e;
 }
 .theme.thoroughbred {
-  background: ;
+  background: #703c2e;
 }
 .theme.vineyard {
-  background: ;
+  background: #6b1a31;
 }
 .theme > .container {
   padding: 0;
