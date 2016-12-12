@@ -158,9 +158,9 @@ h6 {
 .container.like-dislike {
   bottom: -100px;
   margin-top: 50px;
-  left: 25%;
+  left: 22%;
   position: absolute;
-  width: 50%;
+  width: 58%;
 }
 .container.like-dislike div {
   float: left;
@@ -263,6 +263,11 @@ h6 {
 .share-container .flex li a {
   display: block;
   text-decoration: none;
+}
+.share-container .flex li a .fb-like {
+  width: 62px;
+  margin: 0 auto;
+  display: block;
 }
 .share-container .flex li a img {
   display: block;

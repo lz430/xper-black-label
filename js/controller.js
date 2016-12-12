@@ -213,7 +213,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
               var max = Math.max.apply(null, Object.values(frequency)); // most frequent
               // find key for the most frequent value
               var winner = Object.keys(frequency).find(element => frequency[element] == max);
-              $window.location.href = 'theme-' + winner + '.html';
+              $window.location.href = 'theme-' + winner + '.php';
 
           } //end 4 swipes
         }; //end swipeRight
