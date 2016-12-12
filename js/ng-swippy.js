@@ -89,6 +89,7 @@ angular.module('ngSwippy', ['ngTouch'])
 				collectionEmpty: '&',
 				swipeLeft: '&',
 				swipeRight: '&',
+				clickLike: '&',
 				cardsNumber: '@',
 				labelOk: '@',
 				labelNegative: '@'

@@ -4,6 +4,7 @@
 	background-size: cover !important;
 }
 .swipable-card {
+  border: 10px solid #fff;
   position: absolute;
   top: 0;
   height: 100%;
@@ -14,6 +15,36 @@
   padding: 0;
   z-index: 10000;
 }
+.like-dislike{
+  display: none;
+}
+.swipable-card:nth-of-type(2){
+  top: 21px;
+  left: 21px;
+  box-shadow: 1px 1px 0px 0px rgba(179,179,179,1);
+}
+.swipable-card:nth-of-type(3){
+  top: 10px;
+  left: 9px;
+  box-shadow: 1px 1px 0px 0px rgba(179,179,179,1);
+}
+.swipable-card:nth-of-type(4){
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 0px 0px rgba(179,179,179,1);
+}
+.swipable-card:nth-of-type(2) .like-dislike{
+  display: none;
+}
+
+.swipable-card:nth-of-type(3) .like-dislike{
+  display: none;
+}
+
+.swipable-card:nth-of-type(4) .like-dislike{
+  display: block;
+}
+
 .ng-swippy .swipable-card:nth-last-of-type(1),
 .ng-swippy .swipable-card:nth-last-of-type(2) {
   -webkit-transition: transform 0.2s, width 0.2s, height 0.2s, margin 0.2s;

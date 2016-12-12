@@ -153,11 +153,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             $scope.actions.unshift({ name: 'Click on item' });
           });
         };
-
-        $scope.clickLike = function(person) {
-          console.log($scope.count);
-          // swipeRight(person);
-        };
+        
         $scope.count = 0;
         $scope.showinfo = false;
         $scope.clickedTimes = 0;
@@ -165,15 +161,12 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
         $scope.picks = [];
         var counterRight = 0;
         var counterLeft = 0;
-        var swipes = {};
-        var picks = [];
-        var counts = [];
-        var $this = this;
 
         $scope.swipeend = function() {
             $scope.actions.unshift({ name: 'Collection Empty' });
             $window.location.href = 'theme-default.html';
-        };
+        }; //endswipeend
+
         $scope.swipeLeft = function(person) {
             //Essentially do nothing
             $scope.actions.unshift({ name: 'Left swipe' });
@@ -182,46 +175,50 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             $(this).each(function() {
                 return counterLeft++;
             });
+        }; //end swipeLeft
 
-        };
         $scope.swipeRight = function(person) {
-            $scope.actions.unshift({ name: 'Right swipe' });
+          $scope.actions.unshift({ name: 'Right swipe' });
 
-            // Count the number of right swipes
-            $(this).each(function() {
-                return counterRight++;
-            });
-            // Checking the circles
-            $('.circle').each(function() {
-                if (!$(this).hasClass('checked')) {
-                    $(this).addClass('checked');
-                    return false;
-                }
-            });
+          // Count the number of right swipes
+          $(this).each(function() {
+              return counterRight++;
+          });
+          // Checking the circles
+          $('.circle').each(function() {
+              if (!$(this).hasClass('checked')) {
+                  $(this).addClass('checked');
+                  return false;
+              }
+          });
 
-            $('.icon-like').addClass('liked');
-            $('.icon-like').removeClass('liked');
+          $('.icon-like').addClass('liked');
+          $('.icon-like').removeClass('liked');
 
-            $scope.picks.push(person.collection);
-            // console.log('Picks: ' + $scope.picks);
-            // console.log("Counter: " + counterRight);
-            if (counterRight === 4) {
-                // Calculate and store the frequency of each swipe
-                var frequency = $scope.picks.reduce(function(frequency, swipe) {
-                    var sofar = frequency[swipe];
-                    if (!sofar) {
-                        frequency[swipe] = 1;
-                    } else {
-                        frequency[swipe] = frequency[swipe] + 1;
-                    }
-                    return frequency;
-                }, {});
+          $scope.picks.push(person.collection);
+          // console.log('Picks: ' + $scope.picks);
+          // console.log("Counter: " + counterRight);
+          if (counterRight === 4) {
+              // Calculate and store the frequency of each swipe
+              var frequency = $scope.picks.reduce(function(frequency, swipe) {
+                  var sofar = frequency[swipe];
+                  if (!sofar) {
+                      frequency[swipe] = 1;
+                  } else {
+                      frequency[swipe] = frequency[swipe] + 1;
+                  }
+                  return frequency;
+              }, {});
 
-                var max = Math.max.apply(null, Object.values(frequency)); // most frequent
-                // find key for the most frequent value
-                var winner = Object.keys(frequency).find(element => frequency[element] == max);
-                $window.location.href = 'theme-' + winner + '.html';
+              var max = Math.max.apply(null, Object.values(frequency)); // most frequent
+              // find key for the most frequent value
+              var winner = Object.keys(frequency).find(element => frequency[element] == max);
+              $window.location.href = 'theme-' + winner + '.html';
 
-            } //end 4 swipes
+          } //end 4 swipes
         }; //end swipeRight
+
+        $scope.clickLike = function() {
+          $scope.swipeRight();
+        }; //clickLike
     });
