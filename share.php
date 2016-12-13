@@ -8,10 +8,8 @@
         </a>
       </li>
       <li class="share">
-        <a href="#" target="_blank">
-          <img src="images/icon-share.png" alt="Share">
-          <h5>Share</h5>
-        </a>
+        <img src="images/icon-share.png" alt="Share">
+        <h5>Share</h5>
       </li>
       <li class="explore">
         <a href="#" target="_blank">

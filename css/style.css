@@ -277,6 +277,13 @@ h6 {
   text-transform: uppercase;
 }
 .share-container .flex li.share img {
-  width: 29%;
+  display: block;
+  margin: 0 auto 10px;
+  width: 31%;
+}
+.share-container .flex li.share h5 {
+  color: #b3b3b3;
+  text-align: center;
+  text-transform: uppercase;
 }
 

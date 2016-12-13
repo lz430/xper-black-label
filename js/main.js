@@ -11,9 +11,10 @@ $(document).ready(function() {
     FB.getLoginStatus();
   });
 
-  $('.share a').on('click', function(){
+  $('.share').on('click', function(){
     FB.ui({
       method: 'share',
+      mobile_iframe: true,
       display: 'popup',
       href: page,
     }, function(response){});
