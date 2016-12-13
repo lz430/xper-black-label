@@ -53,7 +53,6 @@
     <div class="container like-dislike">
       <div class="circle x" ng-click="clickDisike(person)"></div>
       <div class="icon-like" ng-click="clickLike(person)"></div>
-      <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
   </div>

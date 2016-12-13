@@ -24,9 +24,39 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'LincolnMillerB-Bold';
+  src: url("../fonts/LincolnMillerB-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'LincolnMillerB-Roman';
+  src: url("../fonts/LincolnMillerB-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'LincolnMillerB-Semibold';
+  src: url("../fonts/LincolnMillerB-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Lincoln-ProximaNova-Light';
+  src: url("../fonts/Lincoln-ProximaNova-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Lincoln-ProximaNova-Sbold';
+  src: url("../fonts/Lincoln-ProximaNova-Sbold.otf") format("opentype");
+}
+
+
 @fontProximaLight    : 'ProximaNovaLtLight';
 @fontProximaSemiBold : 'ProximaNovaLtSemibold';
-
+@fontLincolnBold     : 'LincolnMillerB-Bold';
+@fontLincolnMRoman   : 'LincolnMillerB-Roman';
+@fontLincolnMSB      : 'LincolnMillerB-Semibold';
+@fontLincolnMPL      : 'Lincoln-ProximaNova-Light';
+@fontLincolnMPSb     : 'Lincoln-ProximaNova-Sbold';
 
 // Colors
 @black     : #000;
@@ -47,6 +77,7 @@
 
 
 // Media Queries
+@mobileTiny  : ~"screen and (max-width: 425px)";
 @mobileSmall : ~"screen and (max-width: 500px)";
 @mobile      : ~"screen and (max-width: 767px)";
 @tablet      : ~"screen and (max-width: 768px)";
@@ -86,19 +117,19 @@ img{
   padding: 15px;
   text-align: center;
   text-decoration: none;
-  width: 22%;
+  width: 92px;
 }
 // Arrow icons
 .icon-arrow-right{
-  background-image: url(../images/sprite-arrows-lr.png);
+  background-image: url(../images/arrow-right.png);
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: left center;
   background-size: 10%;
 }
 .icon-arrow-left{
-  background-image: url(../images/sprite-arrows-lr.png);
+  background-image: url(../images/arrow-left.png);
   background-repeat: no-repeat;
-  background-position: 0 -70px;
+  background-position: left center;
   background-size: 10%;
 }
 .back-arrow{
@@ -194,11 +225,13 @@ h1, h2, h3, h4 ,h5 ,h6{
     img{
       display: block;
       margin: 40px auto 0;
+      max-width: 75%;
     }
   }
 
   &.hero{
     h1{
+      font-family: @fontLincolnMRoman;
       font-size: 330%;
       text-align: center;
       padding: 100px 0;
@@ -207,28 +240,32 @@ h1, h2, h3, h4 ,h5 ,h6{
 
   &.instruct{
     li{
-        height: 50px;
+        display: table;
+        height: 60px; 
         padding-left: 45px;
-
+        margin:   0 auto;
+        width:  70%;
+       
       p{
+        display: table-cell;
         color: @lightGray;
+        font-family: @fontLincolnMPL; 
         font-size: 90%;
         line-height: 15px;
-        margin: 0 0 30px;
         text-transform: uppercase;
+        vertical-align: middle;
       }
     }
   }//end instruct
 
   &.cta{
+    margin-top: 50px;
+    
     .btn{
       margin: 0 auto 40px ;
     }
   }
-  &.ng-swippy{
-    margin: 0 auto;
-    width: 300px;
-  }
+  
   &.deck{
     padding: 25px 25px 0;
 
@@ -264,21 +301,34 @@ h1, h2, h3, h4 ,h5 ,h6{
 
     .ng-swippy{
       @media @mobileSmall{
+        height: 300px;
         margin: 0;
         width: 90%;
+      }
+
+      @media @mobileTiny{
+        margin: 0 auto 0 -20px;
       }
     }
   }
 
   &.like-dislike{
-    margin: 90px 0 0 17%;
-    width: 58%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    margin: 90px auto;
+    max-width: 225px;
+
+    @media @tablet{
+      
+    }
 
     div{
-      float: left;
 
       &:nth-child(2){
-        float: right;
       }
     }
   }

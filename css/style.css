@@ -13,6 +13,26 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'LincolnMillerB-Bold';
+  src: url("../fonts/LincolnMillerB-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'LincolnMillerB-Roman';
+  src: url("../fonts/LincolnMillerB-Roman.otf") format("opentype");
+}
+@font-face {
+  font-family: 'LincolnMillerB-Semibold';
+  src: url("../fonts/LincolnMillerB-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Lincoln-ProximaNova-Light';
+  src: url("../fonts/Lincoln-ProximaNova-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Lincoln-ProximaNova-Sbold';
+  src: url("../fonts/Lincoln-ProximaNova-Sbold.otf") format("opentype");
+}
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -38,18 +58,18 @@ img {
   padding: 15px;
   text-align: center;
   text-decoration: none;
-  width: 22%;
+  width: 92px;
 }
 .icon-arrow-right {
-  background-image: url(../images/sprite-arrows-lr.png);
+  background-image: url(../images/arrow-right.png);
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: left center;
   background-size: 10%;
 }
 .icon-arrow-left {
-  background-image: url(../images/sprite-arrows-lr.png);
+  background-image: url(../images/arrow-left.png);
   background-repeat: no-repeat;
-  background-position: 0 -70px;
+  background-position: left center;
   background-size: 10%;
 }
 .back-arrow {
@@ -138,29 +158,35 @@ h6 {
 .container.logo img {
   display: block;
   margin: 40px auto 0;
+  max-width: 75%;
 }
 .container.hero h1 {
+  font-family: 'LincolnMillerB-Roman';
   font-size: 330%;
   text-align: center;
   padding: 100px 0;
 }
 .container.instruct li {
-  height: 50px;
+  display: table;
+  height: 60px;
   padding-left: 45px;
+  margin: 0 auto;
+  width: 70%;
 }
 .container.instruct li p {
+  display: table-cell;
   color: #ccc;
+  font-family: 'Lincoln-ProximaNova-Light';
   font-size: 90%;
   line-height: 15px;
-  margin: 0 0 30px;
   text-transform: uppercase;
+  vertical-align: middle;
+}
+.container.cta {
+  margin-top: 50px;
 }
 .container.cta .btn {
   margin: 0 auto 40px ;
-}
-.container.ng-swippy {
-  margin: 0 auto;
-  width: 300px;
 }
 .container.deck {
   padding: 25px 25px 0;
@@ -194,19 +220,25 @@ h6 {
 }
 @media screen and (max-width: 500px) {
   .container.deck .ng-swippy {
+    height: 300px;
     margin: 0;
     width: 90%;
   }
 }
+@media screen and (max-width: 425px) {
+  .container.deck .ng-swippy {
+    margin: 0 auto 0 -20px;
+  }
+}
 .container.like-dislike {
-  margin: 90px 0 0 17%;
-  width: 58%;
-}
-.container.like-dislike div {
-  float: left;
-}
-.container.like-dislike div:nth-child(2) {
-  float: right;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  margin: 90px auto;
+  max-width: 225px;
 }
 .theme {
   padding-top: 50px;
