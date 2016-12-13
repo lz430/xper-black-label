@@ -20,37 +20,45 @@ $(document).ready(function() {
     }, function(response){});
   }); //end share
 
-  var exploreUrl;
+  var exploreUrl, themeClass;
   var name = page.match(/([^\/]*)\/*$/)[1];
 
 
   switch (name){
     case "theme-center-stage.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/centerstage/";
+      themeClass = "center-stage";
       break; 
     case "theme-chalet.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/chalet/";
+      themeClass = "chalet";
       break; 
     case "theme-indulgence.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/indulgence/";
+      themeClass = "indulgence";
       break; 
     case "theme-modern.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/modernheritage/";
+      themeClass = "modern";
       break; 
     case "theme-rhapsody.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/rhapsody/";
+      themeClass = "rhapsody";
       break; 
     case "theme-thoroughbred.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/thoroughbred/";
+      themeClass = "thoroughbred";
       break; 
     case "theme-vineyard.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/vineyard/";
+      themeClass = "vineyard";
       break; 
     default: 
     exploreUrl = "http://www.lincoln.com/blacklabel/";
+    themeClass = "";
   }
 
 
   $('.explore a').attr('href', exploreUrl);
-
+  $('body').addClass('theme ' + themeClass);
 });
