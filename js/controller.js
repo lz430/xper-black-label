@@ -219,7 +219,18 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
         }; //end swipeRight
 
         $scope.clickLike = function(person) {
+          var animated = false;
+          $('.icon-like').click(function(){
+            if(!animated){
+              $(this).addClass('happy').removeClass('broken');
+              animated = true;
+            }
+            else {
+              $(this).removeClass('happy').addClass('broken');
+              animated = false;
+            }
+          }); 
           console.log(newVar);
-          $scope.swipeRight($scope);
+          //$scope.swipeRight($scope);
         }; //clickLike
     });

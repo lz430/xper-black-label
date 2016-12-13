@@ -77,6 +77,37 @@ img {
   background-size: 50%;
   height: 42.5px;
   width: 94px;
+  transition: all .3s ease;
+}
+.icon-like:before {
+  content: "❤";
+  position: absolute;
+  color: #A12B2B;
+  opacity: 0;
+  z-index: 99999999;
+}
+.icon-like.happy {
+  color: #A12B2B;
+}
+.icon-like.happy:before {
+  opacity: 0;
+  transform: translateY(-30px) rotateZ(5deg);
+  animation: fly 1s ease;
+  font-size: 30px;
+}
+@keyframes fly {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotateZ(15deg);
+  }
+  50% {
+    opacity: .75;
+    transform: scale(4) translateY(-30px) rotateZ(-15deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(4) translateY(-50px) rotateZ(15deg);
+  }
 }
 body {
   background: #000;
