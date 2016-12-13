@@ -15,9 +15,6 @@
   padding: 0;
   z-index: 10000;
 }
-.like-dislike{
-  display: none;
-}
 .swipable-card:nth-of-type(2){
   top: 21px;
   left: 21px;

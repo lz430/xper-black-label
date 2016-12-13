@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var page = window.location.href;
+
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
     FB.init({
@@ -9,11 +10,46 @@ $(document).ready(function() {
     $('#loginbutton,#feedbutton').removeAttr('disabled');
     FB.getLoginStatus();
   });
+
   $('.share a').on('click', function(){
     FB.ui({
       method: 'share',
       display: 'popup',
       href: page,
     }, function(response){});
-  });
+  }); //end share
+
+  var exploreUrl;
+  var name = page.match(/([^\/]*)\/*$/)[1];
+
+
+  switch (name){
+    case "theme-center-stage.php":
+      exploreUrl =  "http://www.lincoln.com/blacklabel/centerstage/";
+      break; 
+    case "theme-chalet.php":
+      exploreUrl =  "http://www.lincoln.com/blacklabel/chalet/";
+      break; 
+    case "theme-indulgence.php":
+      exploreUrl =  "http://www.lincoln.com/blacklabel/indulgence/";
+      break; 
+    case "theme-modern.php":
+      exploreUrl =  "http://www.lincoln.com/blacklabel/modernheritage/";
+      break; 
+    case "theme-rhapsody.php":
+      exploreUrl =  "http://www.lincoln.com/blacklabel/rhapsody/";
+      break; 
+    case "theme-thoroughbred.php":
+      exploreUrl =  "http://www.lincoln.com/blacklabel/thoroughbred/";
+      break; 
+    case "theme-vineyard.php":
+      exploreUrl =  "http://www.lincoln.com/blacklabel/vineyard/";
+      break; 
+    default: 
+    exploreUrl = "http://www.lincoln.com/blacklabel/";
+  }
+
+
+  $('.explore a').attr('href', exploreUrl);
+
 });

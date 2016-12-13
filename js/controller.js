@@ -153,7 +153,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             $scope.actions.unshift({ name: 'Click on item' });
           });
         };
-        
+
         $scope.count = 0;
         $scope.showinfo = false;
         $scope.clickedTimes = 0;
@@ -161,6 +161,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
         $scope.picks = [];
         var counterRight = 0;
         var counterLeft = 0;
+        var newVar = $scope;
 
         $scope.swipeend = function() {
             $scope.actions.unshift({ name: 'Collection Empty' });
@@ -184,6 +185,9 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
           $(this).each(function() {
               return counterRight++;
           });
+          
+          $scope.picks.push(person.collection);
+
           // Checking the circles
           $('.circle').each(function() {
               if (!$(this).hasClass('checked')) {
@@ -194,10 +198,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
 
           $('.icon-like').addClass('liked');
           $('.icon-like').removeClass('liked');
-
-          $scope.picks.push(person.collection);
-          // console.log('Picks: ' + $scope.picks);
-          // console.log("Counter: " + counterRight);
           if (counterRight === 4) {
               // Calculate and store the frequency of each swipe
               var frequency = $scope.picks.reduce(function(frequency, swipe) {
@@ -218,7 +218,8 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
           } //end 4 swipes
         }; //end swipeRight
 
-        $scope.clickLike = function() {
-          $scope.swipeRight();
+        $scope.clickLike = function(person) {
+          console.log(newVar);
+          $scope.swipeRight($scope);
         }; //clickLike
     });

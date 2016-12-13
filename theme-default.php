@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chalet</title>
+  <title>Default</title>
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
@@ -28,36 +28,47 @@
   </script>
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
-  <div class="container theme chalet">
+  <div class="container theme center-stage">
     <div class="logo">
       <img src="images/logo-black-label.png" alt="Lincoln Black Label">
     </div>
     <div class="container hero-text">
-      <h1>Can you feel the crisp air? You're most certainly chalet.</h1>
+      <h1>YOU'RE OBVIOUSLY A PERSON WHO'S VERY DISCERNING.</h1>
       <p>
-        You love the thrill of being on a ski slope. And feel at ease sitting with friends by the fire in an après-ski lodge. That’s why Black Label’s Chalet theme is perfect for you. With its Engaging Espresso and Cashmere Venetian Leathers paired with deep Silverwood appliques, you’ll find yourself on a never-ending luxurious Alpine holiday.
+        Center Stage is the perfect theme for you. Experience the excitement of a curtain skirting across the main stage on opening night and get ready to be impressed. With its Jet Black leather interior accented by Foxfire Red Alcantara®, you can make a bold statement wherever you go.
       </p>
     </div>
     
     <div class="container grid-container">
       <div class="row">
-        <img src="images/theme/chalet-top.png" alt="Chalet" class="full">
+        <img src="images/theme/center-stage/cs-top.png" alt="Chalet" class="full">
       </div>
       <div class="row">
-        <img src="images/theme/chalet-left-1.png" alt="Image 1">
-        <img src="images/theme/chalet-left-2.png" alt="Image 2">
-        <img src="images/theme/chalet-right-1.png" alt="Image 3">
+        <div class="col50">
+          <img src="images/theme/center-stage/cs-left-1.png" alt="Image 1">
+          <img src="images/theme/center-stage/cs-left-2.png" alt="Image 2">
+        </div>
+        <div class="col50">
+          <img src="images/theme/center-stage/cs-right-1.png" alt="Image 3">
+        </div>
+        <div class="clearfix"></div>
       </div>
+      <div class="clearfix"></div>
+
       <div class="row">
-        <img src="images/theme/chalet-mid.png" alt="Image 4" class="full">
+        <img src="images/theme/center-stage/cs-mid.png" alt="Image 4" class="full">
       </div>
       
       <div class="row">
-        <img src="images/theme/chalet-bottom-1.png" alt="Image 5">
-        <img src="images/theme/chalet-bottom-2.png" alt="Image 6">
-        <img src="images/theme/chalet-bottom-3.png" alt="Image 7">
+        <img src="images/theme/center-stage/cs-bottom-1.png" alt="Image 5" class="col50">
+        <img src="images/theme/center-stage/cs-bottom-2.png" alt="Image 6" class="col50">
+        <div class="clearfix"></div>
       </div>
-    </div>
+      <div class="row">
+
+        <img src="images/theme/center-stage/cs-bottom-3.png" alt="Image 7">
+      </div>
+    </div> <!-- end grid-container-->
   </div><!-- end main container-->
   <?php include 'share.php' ?>
   <!-- Scripts -->

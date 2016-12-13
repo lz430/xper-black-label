@@ -5,19 +5,6 @@
           <div class="know-label">{{labelOk ? labelOk : "YES"}}</div>
           <div class="dontknow-label">{{labelNegative ? labelNegative : "NO"}}</div>
       </div>
-      <div class="progress-stats" ng-if="data">
-          <div class="card-shown">
-              <div class="card-shown-text">{{person.collection}}</div>
-              <div class="card-shown-number">{{person.subtitle}}</div>
-          </div>
-          <div class="card-number">{{collection.length - (collection.indexOf(person))}}/{{collection.length}}&nbsp;
-          </div>
-      </div>
-      <div class="container like-dislike" >
-        <div class="circle x" ng-click="$parent.$parent.clickDisike()"></div>
-        <div class="icon-like" ng-click="$parent.$parent.clickLike()"></div>
-        <div class="clearfix"></div>
-      </div>
+      <div class="clearfix"></div>
     </div><!-- end person-->
-    <div class="clearfix"></div>
 </div>

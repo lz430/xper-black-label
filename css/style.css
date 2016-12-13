@@ -156,10 +156,7 @@ h6 {
   margin-right: 0;
 }
 .container.like-dislike {
-  bottom: -100px;
-  margin-top: 50px;
-  left: 22%;
-  position: absolute;
+  margin: 90px 0 0 28%;
   width: 58%;
 }
 .container.like-dislike div {
