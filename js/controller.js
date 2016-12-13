@@ -165,7 +165,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
 
         $scope.swipeend = function() {
             $scope.actions.unshift({ name: 'Collection Empty' });
-            $window.location.href = 'theme-default.html';
+            $window.location.href = 'theme-default.php';
         }; //endswipeend
 
         $scope.swipeLeft = function(person) {
