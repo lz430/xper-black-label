@@ -86,18 +86,20 @@ img{
   padding: 15px;
   text-align: center;
   text-decoration: none;
-  width: 20%;
+  width: 22%;
 }
 // Arrow icons
 .icon-arrow-right{
   background-image: url(../images/sprite-arrows-lr.png);
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: 10%;
 }
 .icon-arrow-left{
   background-image: url(../images/sprite-arrows-lr.png);
   background-repeat: no-repeat;
-  background-position: 0 -160px;
+  background-position: 0 -70px;
+  background-size: 10%;
 }
 .back-arrow{
   background: url(../images/icon-left-arrow.png) no-repeat center center;
@@ -184,34 +186,40 @@ h1, h2, h3, h4 ,h5 ,h6{
   width: 100%;
 
   @media @mobile{
-    width: 85%;
+    width: 95%;
     padding: 0 5px;
   }
   
   &.logo{
     img{
       display: block;
-      margin: 90px auto 0;
+      margin: 40px auto 0;
     }
   }
 
   &.hero{
     h1{
-      font-size: 500%;
+      font-size: 330%;
       text-align: center;
-      padding: 200px 0;
+      padding: 100px 0;
     }
   }//end hero
 
   &.instruct{
     li{
-      color: @lightGray;
-      height: 73px;
-      line-height: 73px;
-      padding-left: 85px;
-      margin: 0 0 30px;
+        height: 50px;
+        padding-left: 45px;
+
+      p{
+        color: @lightGray;
+        font-size: 90%;
+        line-height: 15px;
+        margin: 0 0 30px;
+        text-transform: uppercase;
+      }
     }
   }//end instruct
+
   &.cta{
     .btn{
       margin: 0 auto 40px ;
@@ -227,7 +235,7 @@ h1, h2, h3, h4 ,h5 ,h6{
     h1{
       color: @white;
       font-size: 150%;
-      margin: 25px 0;
+      margin: 15px 0;
       text-align: center;
       text-transform: uppercase;
     }
@@ -253,10 +261,17 @@ h1, h2, h3, h4 ,h5 ,h6{
         }
       }
     }
+
+    .ng-swippy{
+      @media @mobileSmall{
+        margin: 0;
+        width: 90%;
+      }
+    }
   }
 
   &.like-dislike{
-    margin: 90px 0 0 28%;
+    margin: 90px 0 0 17%;
     width: 58%;
 
     div{

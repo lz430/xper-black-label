@@ -58,7 +58,7 @@
   width: 100%;
 }
 .ng-swippy {
-  margin: 0 auto;
+  margin: 0 auto 0 -15px;
 	position: relative;
   height: 367px;
   width: 367px;
