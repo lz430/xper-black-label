@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <!-- Facebook Open Graph -->
+  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/deck.php" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Black Label" />
+  <meta property="og:description" content="Testing" />
+  <meta property="og:image" content="http://430designs.com/xperience/black-label-app/images/logo-black.png" />
+  <meta property="og:image:width" content="250" />
+  <meta property="og:image:height" content="63" />
+  <meta property="fb:app_id" content="1798124750444148" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,15 +48,15 @@
   <div class="container instruct">
     <ul>
       <li class="icon icon-arrow-right">
-        Swipe right for images that define your ideal lifestyle...
+        <p>Swipe right for images that define your ideal lifestyle...</p>
       </li>
       <li class="icon icon-arrow-left">
-        And left for images that don't.
+        <p>And left for images that don't.</p>
       </li>
     </ul>
   </div>
   <div class="container cta">
-    <a href="" class="btn btn-continue">Continue</a>
+    <a href="deck.php" class="btn btn-continue">Continue</a>
   </div>
   
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
