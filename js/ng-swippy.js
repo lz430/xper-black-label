@@ -122,23 +122,23 @@ angular.module('ngSwippy', ['ngTouch'])
 							directionHandler = undefined;
 							break;
 					}
-					switch(click){
-						case 'dislike':
-							directionHandler = scope.swipeLeft();
-							break;
-						case 'like':
-							directionHandler = scope.swipeRight();
-							break;
-						default:
-							directionHandler = undefined;
-							break;
-					}
+					// switch(click){
+					// 	case 'dislike':
+					// 		directionHandler = scope.swipeLeft();
+					// 		break;
+					// 	case 'like':
+					// 		directionHandler = scope.swipeRight();
+					// 		break;
+					// 	default:
+					// 		directionHandler = undefined;
+					// 		break;
+					// }
 					if (direction){
 						directionHandler(person);
 					}
-					if(click){
-						directionHandler(person);
-					}
+					// if(click){
+					// 	directionHandler(person);
+					// }
 					scope.people.splice(scope.people.indexOf(person), 1);
 					if (scope.people.length === 0){
 						var emptyCollectionHandler = scope.collectionEmpty();

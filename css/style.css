@@ -98,9 +98,9 @@ img {
 }
 .icon-like {
   background: url(../images/icon-heart.png) no-repeat center center;
-  background-size: 50%;
-  height: 42.5px;
-  width: 94px;
+  background-size: 76%;
+  height: 39px;
+  width: 60px;
   transition: all .3s ease;
 }
 .icon-like:before {
@@ -198,6 +198,9 @@ h6 {
 .container.deck {
   padding: 5px 0;
 }
+.container.deck > * {
+  border: 1px solid red;
+}
 .container.deck h1 {
   color: #fff;
   font-family: 'Lincoln-ProximaNova-Sbold';
@@ -238,15 +241,15 @@ h6 {
     width: 90%;
   }
 }
-.container.like-dislike {
+.container .like-dislike {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
   align-content: center;
-  margin: 90px auto 0;
-  max-width: 225px;
+  margin: 50px auto 0;
+  max-width: 165px;
 }
 .theme {
   padding-top: 50px;

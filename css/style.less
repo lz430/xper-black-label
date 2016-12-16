@@ -163,9 +163,9 @@ img{
 //Other icons
 .icon-like{
   background: url(../images/icon-heart.png) no-repeat center center;
-  background-size: 50%;
-  height: 42.5px;
-  width: 94px;
+  background-size: 76%;
+  height: 39px;
+  width: 60px;
   transition: all .3s ease; 
 
   &:before{
@@ -277,6 +277,10 @@ h1, h2, h3, h4 ,h5 ,h6{
   &.deck{
     padding: 5px 0;
 
+    > *{
+      border: 1px solid red;
+    }
+
     h1{
       color: @white;
       font-family:  @fontLincolnMPSb;
@@ -321,15 +325,15 @@ h1, h2, h3, h4 ,h5 ,h6{
     }
   }
 
-  &.like-dislike{
+  .like-dislike{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
     align-content: center;
-    margin: 90px auto 0;
-    max-width: 225px;
+    margin: 50px auto 0;
+    max-width: 165px;
 
     @media @tablet{
 

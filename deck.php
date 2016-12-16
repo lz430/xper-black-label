@@ -48,11 +48,10 @@
     </ul>
     <div class="clearfix"></div>
     <ng-swippy collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='4' label-ok='Cool' label-negative='Bad'></ng-swippy>
-    <div class="container like-dislike">
+    <div class="like-dislike">  
       <div class="circle x" ng-click="clickDislike($event)"></div>
       <div class="icon-like" ng-click="clickLike($event)"></div>
     </div>
-    <div class="clearfix"></div>
   </div>
   <!-- Scripts -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
