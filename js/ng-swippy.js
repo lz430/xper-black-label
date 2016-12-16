@@ -81,7 +81,7 @@ angular.module('ngSwippy', ['ngTouch'])
 		return {
 			restrict: 'E',
 			replace: true,
-			templateUrl: 'card-tpl.html',
+			templateUrl: 'http://430designs.com/xperience/black-label-app/card-tpl.html',
 			scope: {
 				collection      : '=',
 				itemClick       : '&',
@@ -110,6 +110,7 @@ angular.module('ngSwippy', ['ngTouch'])
 				};
 				scope.removeElementFromCollection = function(person, direction){
 					var directionHandler;
+					var click;
 					switch(direction){
 						case 'left':
 							directionHandler = scope.swipeLeft();
@@ -121,7 +122,21 @@ angular.module('ngSwippy', ['ngTouch'])
 							directionHandler = undefined;
 							break;
 					}
+					switch(click){
+						case 'dislike':
+							directionHandler = scope.swipeLeft();
+							break;
+						case 'like':
+							directionHandler = scope.swipeRight();
+							break;
+						default:
+							directionHandler = undefined;
+							break;
+					}
 					if (direction){
+						directionHandler(person);
+					}
+					if(click){
 						directionHandler(person);
 					}
 					scope.people.splice(scope.people.indexOf(person), 1);
@@ -136,7 +151,7 @@ angular.module('ngSwippy', ['ngTouch'])
 					}
 				};
 				scope.init();
-			}
+			}//end link
 		}
 	}])
 	.value('swipeDirectiveValues', {
@@ -148,7 +163,7 @@ angular.module('ngSwippy', ['ngTouch'])
 			scope: {
 				person: '='
 			},
-			link: function(scope, element, attrs){
+			link: function(scope, element, attrs, swObj){
 				var screenWidth = $window.screen.availWidth;
 				var screenHeight = $window.screen.availHeight;
 				var moving = false;
@@ -157,12 +172,17 @@ angular.module('ngSwippy', ['ngTouch'])
 				var $labelknow = element[0].querySelector('.know-label');
 				scope.swipeObject = {
 					swiping: 0,
-					startX: 0,
-					startY: 0,
+					startX : 0,
+					startY : 0,
 					offsetX: 0,
-					offsetY: 0
+					offsetY: 0,
+					like   : swObj,
+					dislike: swObj
 				};
 				var expressionHandler = scope.$parent.itemClick();
+				element.on('click', function(event) {
+					var click = scope.swipeObject.like < 0 ? 'like' : 'dislike';
+				});
 				swipe.bind(element, {
 					start: function(coordinates, evt) {
 						var children = element.parent().children();
@@ -180,7 +200,7 @@ angular.module('ngSwippy', ['ngTouch'])
 						timeoutStart = Date.now();
 					},
 					move: function(coordinates) {
-						$('body').addClass('noscroll');
+						// $('body').addClass('noscroll');
 						if (!scope.isSwiping || swipeDirectiveValues.moveBack) {
 							return;
 						} else {
@@ -273,6 +293,7 @@ angular.module('ngSwippy', ['ngTouch'])
 							element.css(style);
 							
 							var direction = scope.swipeObject.offsetX < 0 ? 'left' : 'right';
+							
 							swipeDirectiveValues.moveBack = false;
 							
 							scope.swipeObject.offsetX = 0;

@@ -23,7 +23,6 @@ $(document).ready(function() {
   var exploreUrl, themeClass;
   var name = page.match(/([^\/]*)\/*$/)[1];
 
-
   switch (name){
     case "theme-center-stage.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/centerstage/";

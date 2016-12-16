@@ -165,7 +165,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             $scope.actions.unshift({ name: 'Collection Empty' });
             $window.location.href = 'theme-default.php';
         }; //endswipeend
-
         $scope.swipeLeft = function(person) {
             //Essentially do nothing
             $scope.actions.unshift({ name: 'Left swipe' });
@@ -175,7 +174,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                 return counterLeft++;
             });
         }; //end swipeLeft
-
         $scope.swipeRight = function(person) {
           $scope.actions.unshift({ name: 'Right swipe' });
           // Count the number of right swipes
@@ -210,9 +208,14 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
               $window.location.href = 'theme-' + winner + '.php';
           } //end 4 swipes
         }; //end swipeRight
-
-        $scope.clickLike = function(e) {
-          $(e.currentTarget).toggleClass('happy');
+        // $scope.clickLike = function(e) {
+        //   $(e.currentTarget).addClass('happy');
+        //   $(e.currentTarget).removeClass('happy');
+        // }; //clickLike
+        $scope.clickLike = function() {
+          // $currentTarget.toggleClass('happy');
+          person = $scope.cardsCollection.slice(0);
+          $scope.swipeRight(person);
         }; //clickLike
 
         $scope.clickDislike = function(e){

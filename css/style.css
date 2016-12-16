@@ -171,7 +171,7 @@ h6 {
   font-family: 'LincolnMillerB-Roman';
   font-size: 330%;
   text-align: center;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .container.instruct li {
   display: table;
@@ -196,7 +196,7 @@ h6 {
   margin: 0 auto 40px ;
 }
 .container.deck {
-  padding: 25px 0;
+  padding: 5px 0;
 }
 .container.deck h1 {
   color: #fff;
@@ -245,7 +245,7 @@ h6 {
   justify-content: space-between;
   align-items: flex-start;
   align-content: center;
-  margin: 90px auto;
+  margin: 90px auto 0;
   max-width: 225px;
 }
 .theme {
@@ -336,25 +336,22 @@ h6 {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  padding: 10px 0;
 }
 .share-container .flex li {
   width: 20%;
 }
-.share-container .flex li a {
-  display: block;
-  text-decoration: none;
-}
-.share-container .flex li a .fb-like {
+.share-container .flex li .fb-like {
   width: 62px;
   margin: 0 auto;
   display: block;
 }
-.share-container .flex li a img {
+.share-container .flex li img {
   display: block;
   margin: 0 auto 10px;
   width: 40%;
 }
-.share-container .flex li a h5 {
+.share-container .flex li h5 {
   color: #b3b3b3;
   text-align: center;
   text-transform: uppercase;

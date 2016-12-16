@@ -1,11 +1,9 @@
 <div class="container share-container">
     <ul class="flex">
       <li class="like">
-        <a href="#" target="_blank">
-          <div class="fb-like" data-href="http://430designs.com/xperience/black-label-app/theme-chalet.html" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-          <img src="images/icon-like.png" alt="Like">
-          <h5>Like</h5>
-        </a>
+        <!-- <div class="fb-like" data-href="http://430designs.com/xperience/black-label-app/theme-chalet.html" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> -->
+        <img src="images/icon-like.png" alt="Like">
+        <h5>Like</h5>
       </li>
       <li class="share">
         <img src="images/icon-share.png" alt="Share">

@@ -39,8 +39,6 @@
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
   <div class="container deck">
-    <a href="index.php" class="icon back-arrow"></a> 
-    <!-- remove arrow on launch -->
     <h1>Select 4</h1>
     <ul class="circles">
       <li class="circle"></li>
