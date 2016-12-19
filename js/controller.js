@@ -17,7 +17,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             return array;
         };
         $scope.deck = shuffleArray($scope.cardsCollection);
-        
+
         $scope.myCustomFunction = function() {
             $timeout(function() {
                 $scope.clickedTimes = $scope.clickedTimes + 1;
@@ -82,20 +82,8 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                 $window.location.href = 'theme-' + winner + '.php';
             } //end 4 swipes
         }; //end swipeRight
-
-        
-        // $scope.clickLike = function(e) {
-        //     $(e.currentTarget).addClass('happy');
-        //     $(e.currentTarget).removeClass('happy');
-        //     person = $scope.cardsCollection.slice(0);
-        //     $scope.swipeRight(person);
-        // }; //clickLike
-
-        // $scope.clickDislike = function(e){
-        //     $(e.currentTarget).toggleClass('dislike;');
-        //     $scope.swipeLeft();
-        // }
     })
+
     .directive('ngSwippy', ['swipe', function(swipe) {
         return {
             restrict: 'E',
@@ -104,13 +92,13 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                     $(this).addClass('happy');
                     var sign = $(this).hasClass("swippy-like")?1:-1;
                     var card = $("div.content-wrapper.swipable-card:last", element/*"div.ng-swippy"*/);
+                    $(this).removeClass('happy');
                     card.trigger("mousedown");
                     card.animate({ left:sign*$("body").width() }, 350, function() {
                       card.trigger("mouseup");
                     });
                     setTimeout(function() {
                       card.trigger("mousemove");
-                      $(this).removeClass('happy');
                     },300);
                 });
             }

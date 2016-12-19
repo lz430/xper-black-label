@@ -212,7 +212,7 @@ directive('ngSwippy', ['swipe', function(swipe){
                         timeoutStart = Date.now();
                     },
                     move: function(coordinates) {
-                        // $('body').addClass('noscroll');
+                        $('body').addClass('noscroll');
                         if (!scope.isSwiping || swipeDirectiveValues.moveBack) {
                             return;
                         } else {
