@@ -33,6 +33,25 @@
   font-family: 'Lincoln-ProximaNova-Sbold';
   src: url("../fonts/Lincoln-ProximaNova-Sbold.otf") format("opentype");
 }
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -164,7 +183,7 @@ h6 {
 }
 .container.logo img {
   display: block;
-  margin: 40px auto 0;
+  margin: 10px auto 0;
   max-width: 75%;
 }
 .container.hero h1 {
@@ -193,13 +212,10 @@ h6 {
   margin-top: 50px;
 }
 .container.cta .btn {
-  margin: 0 auto 40px ;
+  margin: 0 auto;
 }
 .container.deck {
   padding: 5px 0;
-}
-.container.deck > * {
-  border: 1px solid red;
 }
 .container.deck h1 {
   color: #fff;
@@ -213,11 +229,17 @@ h6 {
   margin: 0 auto 35px;
   width: 100%;
   display: flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -webkit-flex-direction: row;
   flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
   justify-content: center;
+  -webkit-justify-content: center;
   align-items: flex-start;
+  -webkit-align-items: flex-start;
   align-content: center;
+  -webkit-align-content: center;
 }
 .container.deck .circles .circle {
   display: inline-block;
@@ -243,17 +265,23 @@ h6 {
 }
 .container .like-dislike {
   display: flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -webkit-flex-direction: row;
   flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
   align-items: flex-start;
+  -webkit-align-items: flex-start;
   align-content: center;
+  -webkit-align-content: center;
   margin: 50px auto 0;
   max-width: 165px;
 }
 .theme {
   padding-top: 50px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
 }
 .theme.center-stage {
   background: #802f2c;
@@ -343,6 +371,9 @@ h6 {
 }
 .share-container .flex li {
   width: 20%;
+}
+.share-container .flex li a {
+  text-decoration: none;
 }
 .share-container .flex li .fb-like {
   width: 62px;

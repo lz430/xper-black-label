@@ -38,7 +38,7 @@
   </script>
   <!-- Start actual code -->
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
-  <div class="container deck">
+  <div class="container deck" ng-cloak>
     <h1>Select 4</h1>
     <ul class="circles">
       <li class="circle"></li>
@@ -47,10 +47,10 @@
       <li class="circle"></li>
     </ul>
     <div class="clearfix"></div>
-    <ng-swippy collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='4' label-ok='Cool' label-negative='Bad'></ng-swippy>
-    <div class="like-dislike">  
-      <div class="circle x" ng-click="clickDislike($event)"></div>
-      <div class="icon-like" ng-click="clickLike($event)"></div>
+    <ng-swippy ng-cloak collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='4' label-ok='Cool' label-negative='Bad'></ng-swippy>
+    <div class="like-dislike" ng-cloak>  
+      <div class="circle x fake-swipe"></div>
+      <div class="icon-like fake-swipe swippy-like"></div>
     </div>
   </div>
   <!-- Scripts -->
