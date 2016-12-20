@@ -134,23 +134,11 @@ directive('ngSwippy', ['swipe', function(swipe){
                         directionHandler = undefined;
                         break;
                 }
-                // switch(click){
-                // 	case 'dislike':
-                // 		directionHandler = scope.swipeLeft();
-                // 		break;
-                // 	case 'like':
-                // 		directionHandler = scope.swipeRight();
-                // 		break;
-                // 	default:
-                // 		directionHandler = undefined;
-                // 		break;
-                // }
+                
                 if (direction){
                     directionHandler(person);
                 }
-                // if(click){
-                // 	directionHandler(person);
-                // }
+                
                 scope.people.splice(scope.people.indexOf(person), 1);
                 if (scope.people.length === 0){
                     var emptyCollectionHandler = scope.collectionEmpty();
@@ -182,22 +170,25 @@ directive('ngSwippy', ['swipe', function(swipe){
                 var timeoutStart = 0;
                 var $labelunknown = element[0].querySelector('.dontknow-label');
                 var $labelknow = element[0].querySelector('.know-label');
+                
                 scope.swipeObject = {
                     swiping: 0,
                     startX : 0,
                     startY : 0,
                     offsetX: 0,
                     offsetY: 0,
-                    like   : swObj,
-                    dislike: swObj
+                    opacity: 1
                 };
+
                 var expressionHandler = scope.$parent.itemClick();
+
                 element.on('click', function(event) {
                     var click = scope.swipeObject.like < 0 ? 'like' : 'dislike';
                 });
                 swipe.bind(element, {
                     start: function(coordinates, evt) {
                         var children = element.parent().children();
+
                         if (swipeDirectiveValues.moveBack){
                             return false;
                         }
@@ -212,11 +203,19 @@ directive('ngSwippy', ['swipe', function(swipe){
                         timeoutStart = Date.now();
                     },
                     move: function(coordinates) {
+                        var $iconLike = $(".icon-like");
+                        var $iconDislike = $(".dislike");
+                        
                         $('body').addClass('noscroll');
+
                         if (!scope.isSwiping || swipeDirectiveValues.moveBack) {
+                            $iconLike.css('opacity', 1); 
+                            $iconDislike.css('opacity', 1);
                             return;
                         } else {
                             if (!moving){
+                                $iconLike.css('opacity', 1); 
+                                $iconDislike.css('opacity', 1); 
                                 element.css({
                                     '-o-transition': 'none',
                                     '-moz-transition': 'none',
@@ -241,11 +240,15 @@ directive('ngSwippy', ['swipe', function(swipe){
                                     labelx = '60%';
                                 }
                                 if (scope.swipeObject.offsetX > 0){
+                                    $iconLike.css('transition', opacity); 
+                                    $iconDislike.css('opacity', 0); 
                                     $labelunknown.style['opacity'] = '0';
                                     $labelknow.style['opacity'] = opacity;
                                     $labelknow.style['left'] = labelx;
                                     $labelknow.style['transform'] = 'rotateZ(-45deg)';
                                 } else {
+                                    $iconDislike.css('opacity', opacity); 
+                                    $iconLike.css('opacity', 0); 
                                     $labelknow.style['opacity'] = '0';
                                     $labelunknown.style['opacity'] = opacity;
                                     $labelunknown.style['left'] = labelx;
@@ -263,6 +266,13 @@ directive('ngSwippy', ['swipe', function(swipe){
                     },
                     end: function(coordinates) {
                         $('body').removeClass('noscroll');
+                        
+                        var $iconLike = $(".icon-like");
+                        var $iconDislike = $(".dislike");
+
+                        $iconLike.css('opacity', 1); 
+                        $iconDislike.css('opacity', 1);
+
                         scope.isSwiping = false;
                         if (scope.swipeObject.offsetX === 0 && scope.swipeObject.offsetY === 0 || swipeDirectiveValues.moveBack){
                             expressionHandler();
@@ -323,6 +333,8 @@ directive('ngSwippy', ['swipe', function(swipe){
                             scope.swipeObject.offsetY = 0;
                             $labelunknown.style['opacity'] = '0';
                             $labelknow.style['opacity'] = '0';
+                            $iconLike.css('opacity', 1); 
+                            $iconDislike.css('opacity', 1);
                         }
                     }
                 });

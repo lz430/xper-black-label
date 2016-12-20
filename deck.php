@@ -49,7 +49,7 @@
     <div class="clearfix"></div>
     <ng-swippy ng-cloak collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='4' label-ok='Cool' label-negative='Bad'></ng-swippy>
     <div class="like-dislike" ng-cloak>  
-      <div class="circle x fake-swipe"></div>
+      <div class="circle x dislike fake-swipe"></div>
       <div class="icon-like fake-swipe swippy-like"></div>
     </div>
   </div>

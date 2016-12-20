@@ -17,12 +17,14 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             return array;
         };
         $scope.deck = shuffleArray($scope.cardsCollection);
+
         $scope.myCustomFunction = function() {
             $timeout(function() {
                 $scope.clickedTimes = $scope.clickedTimes + 1;
                 $scope.actions.unshift({ name: 'Click on item' });
             });
         }; //end myCustomFunction
+
         $scope.count = 0;
         $scope.showinfo = false;
         $scope.clickedTimes = 0;
@@ -31,10 +33,12 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
         var counterRight = 0;
         var counterLeft = 0;
         var newVar = $scope;
+        
         $scope.swipeend = function() {
             $scope.actions.unshift({ name: 'Collection Empty' });
             $window.location.href = 'theme-default.php';
         }; //endswipeend
+
         $scope.swipeLeft = function(person) {
             //Essentially do nothing
             $scope.actions.unshift({ name: 'Left swipe' });
@@ -44,6 +48,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                 return counterLeft++;
             });
         }; //end swipeLeft
+
         $scope.swipeRight = function(person) {
             $scope.actions.unshift({ name: 'Right swipe' });
             // Count the number of right swipes
@@ -53,13 +58,12 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             $scope.picks.push(person.collection);
             // Checking the circles
             $('.circle').each(function() {
-                if (!$(this).hasClass('checked')) {
-                    $(this).addClass('checked');
-                    return false;
-                }
+              if (!$(this).hasClass('checked')) {
+                  $(this).addClass('checked');
+                  return false;
+              }
             });
-            $('.icon-like').addClass('liked');
-            $('.icon-like').removeClass('liked');
+           
             if (counterRight === 4) {
                 // Calculate and store the frequency of each swipe
                 var frequency = $scope.picks.reduce(function(frequency, swipe) {
@@ -82,6 +86,7 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                 $window.location.href = 'theme-' + winner + '.php';
             } //end 4 swipes
         }; //end swipeRight
+    
     })
     .directive('ngSwippy', ['swipe', function(swipe) {
         return {
