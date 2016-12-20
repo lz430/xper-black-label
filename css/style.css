@@ -154,6 +154,7 @@ img {
 }
 body {
   background: #000;
+  font-family: 'LincolnMillerB-Roman';
   font-size: 100%;
 }
 body.noscroll {
@@ -318,15 +319,16 @@ h6 {
 }
 .theme h1 {
   color: #fff;
-  font-family: 'ProximaNovaLtSemibold';
+  font-family: 'LincolnMillerB-Roman';
   font-size: 30px;
   margin: 0 0 25px;
   padding: 0;
   text-align: center;
+  text-transform: uppercase;
 }
 .theme p {
   color: #fff;
-  font-family: 'ProximaNovaLtSemibold';
+  font-family: 'LincolnMillerB-Roman';
   font-size: 15px;
   line-height: 20px;
   margin: 0;
@@ -387,6 +389,7 @@ h6 {
 }
 .share-container .flex li h5 {
   color: #b3b3b3;
+  font-family: 'LincolnMillerB-Bold';
   text-align: center;
   text-transform: uppercase;
 }
@@ -400,4 +403,4 @@ h6 {
   text-align: center;
   text-transform: uppercase;
 }
-
+

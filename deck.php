@@ -54,11 +54,12 @@
     </div>
   </div>
   <!-- Scripts -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="js/ng-swippy.js"></script>
-  <script src="js/angular-touch.js"></script>
-  <script src="js/controller.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.2/es6-shim.min.js"></script>
+  <script type="text/javascript" src="js/ng-swippy.js"></script>
+  <script type="text/javascript" src="js/angular-touch.js"></script>
+  <script type="text/javascript" src="js/controller.js"></script>
 </body>
 </html>

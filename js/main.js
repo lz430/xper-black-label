@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var page = window.location.href;
+    var page = window.location.href;
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
     FB.init({

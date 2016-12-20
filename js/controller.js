@@ -17,14 +17,12 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             return array;
         };
         $scope.deck = shuffleArray($scope.cardsCollection);
-
         $scope.myCustomFunction = function() {
             $timeout(function() {
                 $scope.clickedTimes = $scope.clickedTimes + 1;
                 $scope.actions.unshift({ name: 'Click on item' });
             });
         }; //end myCustomFunction
-
         $scope.count = 0;
         $scope.showinfo = false;
         $scope.clickedTimes = 0;
@@ -33,12 +31,10 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
         var counterRight = 0;
         var counterLeft = 0;
         var newVar = $scope;
-
         $scope.swipeend = function() {
             $scope.actions.unshift({ name: 'Collection Empty' });
             $window.location.href = 'theme-default.php';
         }; //endswipeend
-
         $scope.swipeLeft = function(person) {
             //Essentially do nothing
             $scope.actions.unshift({ name: 'Left swipe' });
@@ -48,7 +44,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                 return counterLeft++;
             });
         }; //end swipeLeft
-
         $scope.swipeRight = function(person) {
             $scope.actions.unshift({ name: 'Right swipe' });
             // Count the number of right swipes
@@ -76,14 +71,18 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                     }
                     return frequency;
                 }, {});
-                var max = Math.max.apply(null, Object.values(frequency)); // most frequent
+                Object.keys(frequency).forEach(function(element) {
+                  console.log('Person ', element,': ', frequency[element]);
+                });
+                var max = Math.max.apply(null, Object.keys(frequency).map(function(k){ return frequency[k]; })); // most frequent
                 // find key for the most frequent value
-                var winner =Object.keys(frequency).find(function (element) { return frequency[element] == max; });
+                var winner = Object.keys(frequency).find(function(element){return frequency[element] == max; });
+                //Underscore
+                // var winner = _.findKey(frequency, val => val === max); 
                 $window.location.href = 'theme-' + winner + '.php';
             } //end 4 swipes
         }; //end swipeRight
     })
-
     .directive('ngSwippy', ['swipe', function(swipe) {
         return {
             restrict: 'E',
@@ -102,5 +101,5 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                     },300);
                 });
             }
-        }
+        };
     }]);
