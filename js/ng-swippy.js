@@ -270,8 +270,7 @@ directive('ngSwippy', ['swipe', function(swipe){
                         var $iconLike = $(".like .bottom");
                         var $iconDislike = $(".dislike .bottom");
 
-                        $iconLike.css('opacity', 0); 
-                        $iconDislike.css('opacity', 0);
+                        
 
                         scope.isSwiping = false;
                         if (scope.swipeObject.offsetX === 0 && scope.swipeObject.offsetY === 0 || swipeDirectiveValues.moveBack){
@@ -333,8 +332,8 @@ directive('ngSwippy', ['swipe', function(swipe){
                             scope.swipeObject.offsetY = 0;
                             $labelunknown.style['opacity'] = '0';
                             $labelknow.style['opacity'] = '0';
-                            $iconLike.css('opacity', 1); 
-                            $iconDislike.css('opacity', 1);
+                            $iconLike.css('opacity', 0); 
+                            $iconDislike.css('opacity', 0);
                         }
                     }
                 });
