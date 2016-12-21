@@ -203,8 +203,8 @@ directive('ngSwippy', ['swipe', function(swipe){
                         timeoutStart = Date.now();
                     },
                     move: function(coordinates) {
-                        var $iconLike = $(".icon-like");
-                        var $iconDislike = $(".dislike");
+                        var $iconLike = $(".like .bottom");
+                        var $iconDislike = $(".dislike .bottom");
                         
                         $('body').addClass('noscroll');
 
@@ -214,8 +214,8 @@ directive('ngSwippy', ['swipe', function(swipe){
                             return;
                         } else {
                             if (!moving){
-                                $iconLike.css('opacity', 1); 
-                                $iconDislike.css('opacity', 1); 
+                                $iconLike.css('opacity', 0); 
+                                $iconDislike.css('opacity', 0); 
                                 element.css({
                                     '-o-transition': 'none',
                                     '-moz-transition': 'none',
@@ -232,27 +232,27 @@ directive('ngSwippy', ['swipe', function(swipe){
                                 scope.swipeObject.offsetY = coordinates.y - scope.swipeObject.startY;
                                 var rotateX = scope.swipeObject.offsetX;
                                 var opacity = Math.abs(scope.swipeObject.offsetX) / 150;
-                                if (opacity > 1) {
-                                    opacity = 1;
-                                }
+                                // if (opacity > 1) {
+                                //     opacity = 1;
+                                // }
                                 var labelx = '15%';
                                 if (scope.swipeObject.offsetX <= 0){
                                     labelx = '60%';
                                 }
                                 if (scope.swipeObject.offsetX > 0){
-                                    $iconLike.css('transition', opacity); 
+                                    $iconLike.css('opacity', opacity); 
                                     $iconDislike.css('opacity', 0); 
-                                    $labelunknown.style['opacity'] = '0';
-                                    $labelknow.style['opacity'] = opacity;
-                                    $labelknow.style['left'] = labelx;
-                                    $labelknow.style['transform'] = 'rotateZ(-45deg)';
+                                    // $labelunknown.style['opacity'] = '0';
+                                    // $labelknow.style['opacity'] = opacity;
+                                    // $labelknow.style['left'] = labelx;
+                                    // $labelknow.style['transform'] = 'rotateZ(-45deg)';
                                 } else {
                                     $iconDislike.css('opacity', opacity); 
                                     $iconLike.css('opacity', 0); 
-                                    $labelknow.style['opacity'] = '0';
-                                    $labelunknown.style['opacity'] = opacity;
-                                    $labelunknown.style['left'] = labelx;
-                                    $labelunknown.style['transform'] = 'rotateZ(45deg)';
+                                    // $labelknow.style['opacity'] = '0';
+                                    // $labelunknown.style['opacity'] = opacity;
+                                    // $labelunknown.style['left'] = labelx;
+                                    // $labelunknown.style['transform'] = 'rotateZ(45deg)';
                                 }
                                 if (scope.swipeObject.offsetY < 0){
                                     rotateX = -scope.swipeObject.offsetX;
@@ -267,11 +267,11 @@ directive('ngSwippy', ['swipe', function(swipe){
                     end: function(coordinates) {
                         $('body').removeClass('noscroll');
                         
-                        var $iconLike = $(".icon-like");
-                        var $iconDislike = $(".dislike");
+                        var $iconLike = $(".like .bottom");
+                        var $iconDislike = $(".dislike .bottom");
 
-                        $iconLike.css('opacity', 1); 
-                        $iconDislike.css('opacity', 1);
+                        $iconLike.css('opacity', 0); 
+                        $iconDislike.css('opacity', 0);
 
                         scope.isSwiping = false;
                         if (scope.swipeObject.offsetX === 0 && scope.swipeObject.offsetY === 0 || swipeDirectiveValues.moveBack){
