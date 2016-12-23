@@ -6,6 +6,7 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+  
   <!-- Facebook Open Graph -->
   <meta property="og:url" content="http://430designs.com/xperience/black-label-app/theme-center-stage.php" />
   <meta property="og:type" content="website" />

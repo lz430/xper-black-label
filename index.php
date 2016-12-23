@@ -14,28 +14,28 @@
     $fbImage   = $imagePath . "/" . $theme . ".jpg";
 
     switch ($theme) {
-      case "center-stage":
+      case "theme-center-stage.php":
           $fbDesc = "I am… CENTER STAGE. I have a flair for the dramatic and love being in the spotlight. What defines you? Find out now.";
           break;
-      case "chalet":
+      case "theme-chalet.php":
           $fbDesc = "I am… CHALET.I live my life as if it were a never-ending luxurious Alpine holiday.What defines you? Find out now.";
           break;
-      case "default":
+      case "theme-default.php":
           $fbDesc = "Difficult to please, but love the spotlight. What defines you? Find out now.";
           break;
-      case "indulgence":
+      case "theme-indulgence.php":
           $fbDesc = "I am… INDULGENCE. Inspired by the rich allure of chocolate, I savor every moment and indulge in all of life’s pleasures. What defines you? Find out now.";
           break;
-      case "modern":
+      case "theme-modern.php":
           $fbDesc = "I am… MODERN HERITAGE. Clean lines. Minimalist. Complicated, but I always know how to make it work. What defines you? Find out now.";
           break;
-      case "rhapsody":
+      case "theme-rhapsody.php":
           $fbDesc = "I am… RHAPSODY.  Driven by the pulse of music, I always know where to find the next “can’t miss” show. What defines you? Find out now.";
           break;
-      case "thoroughbred":
+      case "theme-thoroughbred.php":
           $fbDesc = "I am… THOROUGHBRED. An equestrian enthusiast at heart and the pinnacle of all things “proper.” What defines you? Find out now.";
           break;
-      case "vineyard":
+      case "theme-vineyard.php":
           $fbDesc = "I am… VINEYARD.  A luxury tastemaker who admires the rich and storied appeal of the vintner’s world.  What defines you? Find out now.";
           break;
       default:
@@ -49,8 +49,8 @@
   <meta property="og:title" content="Black Label" />
   <meta property="og:description" content="<?php echo $fbDesc; ?>" />
   <meta property="og:image" content="<?php echo $fbImage; ?>" />
-  <meta property="og:image:width" content="250" />
-  <meta property="og:image:height" content="63" />
+  <meta property="og:image:width" content="367" />
+  <meta property="og:image:height" content="367" />
   <meta property="fb:app_id" content="1798124750444148" />
 
   <link rel="stylesheet" href="css/style.css">

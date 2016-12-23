@@ -1,6 +1,7 @@
 $(document).ready(function(){
   var page = window.location.href;
-  // shareUrl = page + shareUrl;
+  var name = page.match(/([^\/]*)\/*$/)[1];
+  var exploreUrl, themeClass;
 
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
@@ -17,12 +18,11 @@ $(document).ready(function(){
       method: 'share',
       mobile_iframe: true,
       display: 'popup',
-      href: 'http://430designs.com/xperience/black-label-app/index.php',
+      href: 'http://430designs.com/xperience/black-label-app/index.php?theme=' + name,
     }, function(response){});
   }); //end share
   
-  var exploreUrl, themeClass;
-  var name = page.match(/([^\/]*)\/*$/)[1];
+
   switch (name){
     case "theme-center-stage.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/centerstage/";
