@@ -17,14 +17,12 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             return array;
         };
         $scope.deck = shuffleArray($scope.cardsCollection);
-
         $scope.myCustomFunction = function() {
             $timeout(function() {
                 $scope.clickedTimes = $scope.clickedTimes + 1;
                 $scope.actions.unshift({ name: 'Click on item' });
             });
         }; //end myCustomFunction
-
         $scope.count = 0;
         $scope.showinfo = false;
         $scope.clickedTimes = 0;
@@ -38,7 +36,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
             $scope.actions.unshift({ name: 'Collection Empty' });
             $window.location.href = 'theme-default.php';
         }; //endswipeend
-
         $scope.swipeLeft = function(person) {
             //Essentially do nothing
             $scope.actions.unshift({ name: 'Left swipe' });
@@ -48,7 +45,6 @@ angular.module('black-label', ['ngTouch', 'ngSwippy'])
                 return counterLeft++;
             });
         }; //end swipeLeft
-
         $scope.swipeRight = function(person) {
             $scope.actions.unshift({ name: 'Right swipe' });
             // Count the number of right swipes

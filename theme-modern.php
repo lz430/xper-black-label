@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
   
   <!-- Facebook Open Graph -->
-  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/deck.php" />
+  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/theme-modern.php" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Modern" />
   <meta property="og:description" content="Testing" />
@@ -41,7 +41,7 @@
   <!-- <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">  </div> -->
   <div class="container theme modern">
       <div class="logo">
-        <img src="images/logo-black-label.png" alt="Lincoln Black Label">
+        <img src="images/logo-black.png" alt="Lincoln Black Label">
       </div>
       <div class="container hero-text">
         <h1>Your style is clearly modern heritage.</h1>

@@ -179,16 +179,13 @@ directive('ngSwippy', ['swipe', function(swipe){
                     offsetY: 0,
                     opacity: 1
                 };
-
                 var expressionHandler = scope.$parent.itemClick();
-
                 element.on('click', function(event) {
                     var click = scope.swipeObject.like < 0 ? 'like' : 'dislike';
                 });
                 swipe.bind(element, {
                     start: function(coordinates, evt) {
                         var children = element.parent().children();
-
                         if (swipeDirectiveValues.moveBack){
                             return false;
                         }
@@ -207,7 +204,6 @@ directive('ngSwippy', ['swipe', function(swipe){
                         var $iconDislike = $(".dislike .bottom");
                         
                         $('body').addClass('noscroll');
-
                         if (!scope.isSwiping || swipeDirectiveValues.moveBack) {
                             $iconLike.css('opacity', 1); 
                             $iconDislike.css('opacity', 1);
@@ -265,13 +261,19 @@ directive('ngSwippy', ['swipe', function(swipe){
                         }
                     },
                     end: function(coordinates) {
-                        $('body').removeClass('noscroll');
-                        
                         var $iconLike = $(".like .bottom");
                         var $iconDislike = $(".dislike .bottom");
 
+                        $('body').removeClass('noscroll');
+                        $iconLike.css({
+                        	'opacity': 0,
+                        	'transition': 'opacity 1s'
+                        }); 
+                        $iconDislike.css({
+                        	'opacity': 0,
+                        	'transition': 'opacity 1s'
+                        }); 
                         
-
                         scope.isSwiping = false;
                         if (scope.swipeObject.offsetX === 0 && scope.swipeObject.offsetY === 0 || swipeDirectiveValues.moveBack){
                             expressionHandler();
@@ -332,8 +334,6 @@ directive('ngSwippy', ['swipe', function(swipe){
                             scope.swipeObject.offsetY = 0;
                             $labelunknown.style['opacity'] = '0';
                             $labelknow.style['opacity'] = '0';
-                            $iconLike.css('opacity', 0); 
-                            $iconDislike.css('opacity', 0);
                         }
                     }
                 });

@@ -1,7 +1,7 @@
 <div class="share-container">
     <ul class="container flex">
       <li class="like">
-        <a href="https://www.facebook.com/LincolnBlackLabelExperience" target="_blank">
+        <a href="https://www.facebook.com/Lincoln/" target="_blank">
           <img src="images/icon-like.png" alt="Like">
           <h5>Like</h5>
         </a>

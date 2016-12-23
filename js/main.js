@@ -1,5 +1,7 @@
-$(document).ready(function() {
-    var page = window.location.href;
+$(document).ready(function(){
+  var page = window.location.href;
+  // shareUrl = page + shareUrl;
+
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
     FB.init({
@@ -9,12 +11,13 @@ $(document).ready(function() {
     $('#loginbutton,#feedbutton').removeAttr('disabled');
     FB.getLoginStatus();
   });
+
   $('.share').on('click', function(){
     FB.ui({
       method: 'share',
       mobile_iframe: true,
       display: 'popup',
-      href: page,
+      href: 'http://430designs.com/xperience/black-label-app/index.php',
     }, function(response){});
   }); //end share
   

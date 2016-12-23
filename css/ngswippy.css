@@ -16,13 +16,13 @@
   z-index: 10000;
 }
 .swipable-card:nth-of-type(2){
-  top: 10px;
+  top: 8px;
   left: 9px;
   box-shadow: 1px 1px 0px 0px rgba(179,179,179,1);
 }
 .swipable-card:nth-of-type(3){
-  top: 7px;
-  left: 6px;
+  top: 4px;
+  left: 5px;
   box-shadow: 1px 1px 0px 0px rgba(179,179,179,1);
 }
 .swipable-card:nth-of-type(4){

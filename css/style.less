@@ -65,6 +65,7 @@
 @offWhite  : #f7f8f8;
 @offBlack  : #333;
 @white     : #fff;
+@orange    : #f15a24;
 
 //Theme colors
 @center-stage: #802f2c;
@@ -136,7 +137,7 @@ img{
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: 92px;
+  width: 130px;
 }
 // Arrow icons
 .icon-arrow-right{
@@ -164,12 +165,13 @@ img{
   background: @black;
   border: 2px solid @white;
   border-radius: 35px;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 
   &.checked{
-    background: url(../images/icon-check.png) no-repeat center center;
+    background: url(../images/icon-check-fill.png) no-repeat center center;
     background-size: 50%;
+    border-color: @orange;
   }
   &.x{
     background: url(../images/icon-x.png) no-repeat center center;
@@ -219,7 +221,7 @@ h1, h2, h3, h4 ,h5 ,h6{
   &.logo{
     img{
       display: block;
-      margin: 10px auto 0;
+      margin: 25px auto 0;
       max-width: 75%;
     }
   }
@@ -229,7 +231,7 @@ h1, h2, h3, h4 ,h5 ,h6{
       font-family: @fontLincolnMRoman;
       font-size: 330%;
       text-align: center;
-      padding: 50px 0;
+      padding: 50px 0 35px;
     }
   }//end hero
 
@@ -254,7 +256,7 @@ h1, h2, h3, h4 ,h5 ,h6{
   }//end instruct
 
   &.cta{
-    margin-top: 50px;
+    margin-top: 18px;
     
     .btn{
       margin: 0 auto;
@@ -262,7 +264,7 @@ h1, h2, h3, h4 ,h5 ,h6{
   }
   
   &.deck{
-    padding: 5px 0;
+    padding: 0;
 
     > *{
       // border: 1px solid red;
@@ -271,13 +273,13 @@ h1, h2, h3, h4 ,h5 ,h6{
     h1{
       color: @white;
       font-family:  @fontLincolnMPSb;
-      font-size: 110%;
-      margin: 15px 0;
+      font-size: 100%;
+      margin: 10px 0;
       text-align: center;
       text-transform: uppercase;
     }
     .circles{
-      margin: 0 auto 35px;
+      margin: 0 auto 10px;
       width: 100%;
       display: flex;
       display: -webkit-flex;
@@ -336,16 +338,20 @@ h1, h2, h3, h4 ,h5 ,h6{
 
     .dislike{
       position: relative;
+      width: 29%;
       
       img{
-        max-width: 50%;
+        // max-width: 50%;
       }
     }
     .like{
       position: relative;
+      width: 33%;
       
       img{
-        max-width: 57%;
+        // max-width: 55%;
+        height: 47px;
+        width: 54px;
       }
     }
     .bottom{
@@ -353,6 +359,8 @@ h1, h2, h3, h4 ,h5 ,h6{
       position: absolute;
       left: 0;
       top: 0;
+      // -webkit-transition: opacity 1s; 
+      // transition: opacity 1s;
     }
   }//end like-dislike
 } //end container
@@ -372,6 +380,10 @@ h1, h2, h3, h4 ,h5 ,h6{
   }
   &.modern{
     background: @modern;
+
+    h1, .hero-text, p{
+      color: @black;
+    }
   }
   &.rhapsody{
     background: @rhapsody;
@@ -408,7 +420,7 @@ h1, h2, h3, h4 ,h5 ,h6{
   }
   p{
     color: @white;
-    font-family: @fontLincolnMRoman;
+    font-family: @fontProximaLight;
     font-size: 15px;
     line-height: 20px;
     margin: 0;
@@ -433,16 +445,19 @@ h1, h2, h3, h4 ,h5 ,h6{
       .col50{
         float: left;
         width: 48%;
-        margin: 0 1%;
 
-        &:last-of-type{
+        &:first-of-type{
+          margin: 0 2% 0 0;
+        }
+
+        &:nth-child(2){
           float: right;
         }
 
         img:nth-of-type(1){
         }
         img:nth-of-type(2){
-          margin-top: 15px;
+          margin-top: 17px;
         }
         img:nth-of-type(3){
         }
@@ -463,9 +478,14 @@ h1, h2, h3, h4 ,h5 ,h6{
     align-items: center;
     align-content: center;
     padding: 10px 0;
+    width: 100%;
 
     li{
       width: 20%;
+      
+      @media @mobileTiny{
+        width: 26%;
+      }      
       
       a{
         text-decoration: none;
@@ -485,7 +505,7 @@ h1, h2, h3, h4 ,h5 ,h6{
 
       h5{
         color: #b3b3b3;
-        font-family: @fontLincolnBold;
+        font-family: @fontProximaLight;
         text-align: center;
         text-transform: uppercase;
       }
@@ -498,6 +518,7 @@ h1, h2, h3, h4 ,h5 ,h6{
         }
         h5{
           color: #b3b3b3;
+          font-family: @fontProximaLight;
           text-align: center;
           text-transform: uppercase;
         }

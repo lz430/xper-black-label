@@ -79,7 +79,7 @@ img {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: 92px;
+  width: 130px;
 }
 .icon-arrow-right {
   background-image: url(../images/arrow-right.png);
@@ -104,12 +104,13 @@ img {
   background: #000;
   border: 2px solid #fff;
   border-radius: 35px;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 .circle.checked {
-  background: url(../images/icon-check.png) no-repeat center center;
+  background: url(../images/icon-check-fill.png) no-repeat center center;
   background-size: 50%;
+  border-color: #f15a24;
 }
 .circle.x {
   background: url(../images/icon-x.png) no-repeat center center;
@@ -156,14 +157,14 @@ h6 {
 }
 .container.logo img {
   display: block;
-  margin: 10px auto 0;
+  margin: 25px auto 0;
   max-width: 75%;
 }
 .container.hero h1 {
   font-family: 'LincolnMillerB-Roman';
   font-size: 330%;
   text-align: center;
-  padding: 50px 0;
+  padding: 50px 0 35px;
 }
 .container.instruct li {
   display: table;
@@ -182,24 +183,24 @@ h6 {
   vertical-align: middle;
 }
 .container.cta {
-  margin-top: 50px;
+  margin-top: 18px;
 }
 .container.cta .btn {
   margin: 0 auto;
 }
 .container.deck {
-  padding: 5px 0;
+  padding: 0;
 }
 .container.deck h1 {
   color: #fff;
   font-family: 'Lincoln-ProximaNova-Sbold';
-  font-size: 110%;
-  margin: 15px 0;
+  font-size: 100%;
+  margin: 10px 0;
   text-align: center;
   text-transform: uppercase;
 }
 .container.deck .circles {
-  margin: 0 auto 35px;
+  margin: 0 auto 10px;
   width: 100%;
   display: flex;
   display: -webkit-flex;
@@ -254,15 +255,15 @@ h6 {
 }
 .container .like-dislike .dislike {
   position: relative;
-}
-.container .like-dislike .dislike img {
-  max-width: 50%;
+  width: 29%;
 }
 .container .like-dislike .like {
   position: relative;
+  width: 33%;
 }
 .container .like-dislike .like img {
-  max-width: 57%;
+  height: 47px;
+  width: 54px;
 }
 .container .like-dislike .bottom {
   opacity: 0;
@@ -285,6 +286,11 @@ h6 {
 }
 .theme.modern {
   background: #d3ccbc;
+}
+.theme.modern h1,
+.theme.modern .hero-text,
+.theme.modern p {
+  color: #000;
 }
 .theme.rhapsody {
   background: #1a355e;
@@ -318,7 +324,7 @@ h6 {
 }
 .theme p {
   color: #fff;
-  font-family: 'LincolnMillerB-Roman';
+  font-family: 'ProximaNovaLtLight';
   font-size: 15px;
   line-height: 20px;
   margin: 0;
@@ -340,9 +346,11 @@ h6 {
 .theme .grid-container .row .col50 {
   float: left;
   width: 48%;
-  margin: 0 1%;
 }
-.theme .grid-container .row .col50:last-of-type {
+.theme .grid-container .row .col50:first-of-type {
+  margin: 0 2% 0 0;
+}
+.theme .grid-container .row .col50:nth-child(2) {
   float: right;
 }
 .theme .grid-container .row .col50 img:nth-of-type(2) {
@@ -360,9 +368,15 @@ h6 {
   align-items: center;
   align-content: center;
   padding: 10px 0;
+  width: 100%;
 }
 .share-container .flex li {
   width: 20%;
+}
+@media screen and (max-width: 425px) {
+  .share-container .flex li {
+    width: 26%;
+  }
 }
 .share-container .flex li a {
   text-decoration: none;
@@ -379,7 +393,7 @@ h6 {
 }
 .share-container .flex li h5 {
   color: #b3b3b3;
-  font-family: 'LincolnMillerB-Bold';
+  font-family: 'ProximaNovaLtLight';
   text-align: center;
   text-transform: uppercase;
 }
@@ -390,6 +404,7 @@ h6 {
 }
 .share-container .flex li.share h5 {
   color: #b3b3b3;
+  font-family: 'ProximaNovaLtLight';
   text-align: center;
   text-transform: uppercase;
 }

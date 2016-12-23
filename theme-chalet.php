@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
   
   <!-- Facebook Open Graph -->
-  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/deck.php" />
+  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/theme-chalet.php" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Chalet" />
   <meta property="og:description" content="Testing" />
@@ -16,6 +16,7 @@
   <meta property="og:image:width" content="250" />
   <meta property="og:image:height" content="63" />
   <meta property="fb:app_id" content="1798124750444148" />
+  
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
