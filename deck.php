@@ -11,7 +11,7 @@
   <meta property="og:url" content="http://430designs.com/xperience/black-label-app/deck.php" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Black Label Deck" />
-  <meta property="og:description" content="Testing" />
+  <meta property="og:description" content="" />
   <meta property="og:image" content="http://430designs.com/xperience/black-label-app/images/logo-black.png" />
   <meta property="og:image:width" content="250" />
   <meta property="og:image:height" content="63" />
@@ -47,7 +47,7 @@
       <li class="circle"></li>
     </ul>
     <div class="clearfix"></div>
-    <ng-swippy ng-cloak collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='4' label-ok='Cool' label-negative='Bad'></ng-swippy>
+    <ng-swippy ng-cloak collection='deck' item-click='myCustomFunction' data='showinfo' collection-empty='swipeend' swipe-left='swipeLeft'  swipe-right='swipeRight' cards-number='5' label-ok='Cool' label-negative='Bad'></ng-swippy>
     <div class="like-dislike" ng-cloak>  
       <div class="dislike fake-swipe">
         <img src="images/icon-x-white.png" alt="Dislike" class="top">

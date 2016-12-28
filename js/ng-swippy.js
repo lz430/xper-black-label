@@ -238,17 +238,9 @@ directive('ngSwippy', ['swipe', function(swipe){
                                 if (scope.swipeObject.offsetX > 0){
                                     $iconLike.css('opacity', opacity); 
                                     $iconDislike.css('opacity', 0); 
-                                    // $labelunknown.style['opacity'] = '0';
-                                    // $labelknow.style['opacity'] = opacity;
-                                    // $labelknow.style['left'] = labelx;
-                                    // $labelknow.style['transform'] = 'rotateZ(-45deg)';
                                 } else {
                                     $iconDislike.css('opacity', opacity); 
                                     $iconLike.css('opacity', 0); 
-                                    // $labelknow.style['opacity'] = '0';
-                                    // $labelunknown.style['opacity'] = opacity;
-                                    // $labelunknown.style['left'] = labelx;
-                                    // $labelunknown.style['transform'] = 'rotateZ(45deg)';
                                 }
                                 if (scope.swipeObject.offsetY < 0){
                                     rotateX = -scope.swipeObject.offsetX;
@@ -263,15 +255,14 @@ directive('ngSwippy', ['swipe', function(swipe){
                     end: function(coordinates) {
                         var $iconLike = $(".like .bottom");
                         var $iconDislike = $(".dislike .bottom");
-
                         $('body').removeClass('noscroll');
                         $iconLike.css({
                         	'opacity': 0,
-                        	'transition': 'opacity 1s'
+                        	'transition': 'opacity 0.1s'
                         }); 
                         $iconDislike.css({
                         	'opacity': 0,
-                        	'transition': 'opacity 1s'
+                        	'transition': 'opacity 0.1s'
                         }); 
                         
                         scope.isSwiping = false;

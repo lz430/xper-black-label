@@ -16,7 +16,6 @@
   <meta property="og:image:width" content="250" />
   <meta property="og:image:height" content="63" />
   <meta property="fb:app_id" content="1798124750444148" />
-
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -65,7 +64,6 @@
         <div class="clearfix"></div>
       </div>
       <div class="clearfix"></div>
-
       <div class="row">
         <img src="images/theme/center-stage/cs-mid.png" alt="Image 4" class="full">
       </div>
@@ -76,7 +74,6 @@
         <div class="clearfix"></div>
       </div>
       <div class="row">
-
         <img src="images/theme/center-stage/cs-bottom-3.png" alt="Image 7">
       </div>
     </div> <!-- end grid-container-->

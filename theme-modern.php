@@ -65,7 +65,6 @@
           <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
-
         <div class="row">
           <img src="images/theme/modern/mod-mid.png" alt="Image 4" class="full">
         </div>
@@ -76,7 +75,6 @@
           <div class="clearfix"></div>
         </div>
         <div class="row">
-
           <img src="images/theme/modern/mod-bottom-3.png" alt="Image 7">
         </div>
       </div> <!-- end grid-container-->

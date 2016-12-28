@@ -6,12 +6,8 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-  <?php 
-    $pageUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    $theme = basename($pageUrl, ".php");
-  ?>
   <!-- Facebook Open Graph -->
-  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/index.php?theme=<?php echo $theme;?>" /> <!-- this needs to be the index page-->
+  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/theme-vineyard.php" /> <!-- this needs to be the index page-->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Vineyard" />
   <meta property="og:description" content="Testing" />
@@ -68,7 +64,6 @@
           <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
-
         <div class="row">
           <img src="images/theme/vineyard/vin-mid.png" alt="Image 4" class="full">
         </div>
@@ -79,7 +74,6 @@
           <div class="clearfix"></div>
         </div>
         <div class="row">
-
           <img src="images/theme/vineyard/vin-bottom-3.png" alt="Image 7">
         </div>
       </div> <!-- end grid-container-->

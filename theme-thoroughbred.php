@@ -12,9 +12,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Thoroughbred" />
   <meta property="og:description" content="Testing" />
-  <meta property="og:image" content="http://430designs.com/xperience/black-label-app/images/logo-black.png" />
-  <meta property="og:image:width" content="250" />
-  <meta property="og:image:height" content="63" />
+  <meta property="og:image" content="http://430designs.com/xperience/black-label-app/images/share/theme-thoroughbred.jpg" />
+  <meta property="og:image:width" content="367" />
+  <meta property="og:image:height" content="367" />
   <meta property="fb:app_id" content="1798124750444148" />
   
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
@@ -65,7 +65,6 @@
           <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
-
         <div class="row">
           <img src="images/theme/thoroughbred/thor-mid.png" alt="Image 4" class="full">
         </div>
@@ -76,7 +75,6 @@
           <div class="clearfix"></div>
         </div>
         <div class="row">
-
           <img src="images/theme/thoroughbred/thor-bottom-3.png" alt="Image 7">
         </div>
       </div> <!-- end grid-container-->

@@ -10,33 +10,41 @@
     $pageUrl   = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     $query     = $_SERVER['QUERY_STRING'];
     $theme     = $_GET["theme"]; //get theme from URL
-    $imagePath = "http://430designs.com/xperience/black-label-app/images";
-    $fbImage   = $imagePath . "/" . $theme . ".jpg";
-
+    $imagePath = "http://430designs.com/xperience/black-label-app/images/share";
+    $noExt     = preg_replace('/\\.[^.\\s]{3,4}$/', '', $theme);
+    $fbImage   = $imagePath . "/" . $noExt . ".jpg"; 
     switch ($theme) {
       case "theme-center-stage.php":
-          $fbDesc = "I am… CENTER STAGE. I have a flair for the dramatic and love being in the spotlight. What defines you? Find out now.";
+          $fbTitle = "I am… CENTER STAGE.";
+          $fbDesc = "I have a flair for the dramatic and love being in the spotlight. What defines you? Find out now.";
           break;
       case "theme-chalet.php":
-          $fbDesc = "I am… CHALET.I live my life as if it were a never-ending luxurious Alpine holiday.What defines you? Find out now.";
+          $fbTitle = "I am… CHALET.";
+          $fbDesc = "I live my life as if it were a never-ending luxurious Alpine holiday.What defines you? Find out now.";
           break;
       case "theme-default.php":
-          $fbDesc = "Difficult to please, but love the spotlight. What defines you? Find out now.";
+          $fbTitle = "Difficult to please,";
+          $fbDesc = " but love the spotlight. What defines you? Find out now.";
           break;
       case "theme-indulgence.php":
-          $fbDesc = "I am… INDULGENCE. Inspired by the rich allure of chocolate, I savor every moment and indulge in all of life’s pleasures. What defines you? Find out now.";
+          $fbTitle = "I am… INDULGENCE.";
+          $fbDesc = " Inspired by the rich allure of chocolate, I savor every moment and indulge in all of life’s pleasures. What defines you? Find out now.";
           break;
       case "theme-modern.php":
-          $fbDesc = "I am… MODERN HERITAGE. Clean lines. Minimalist. Complicated, but I always know how to make it work. What defines you? Find out now.";
+          $fbTitle = "I am… MODERN ";
+          $fbDesc = "HERITAGE. Clean lines. Minimalist. Complicated, but I always know how to make it work. What defines you? Find out now.";
           break;
       case "theme-rhapsody.php":
-          $fbDesc = "I am… RHAPSODY.  Driven by the pulse of music, I always know where to find the next “can’t miss” show. What defines you? Find out now.";
+          $fbTitle = "I am… RHAPSODY.";
+          $fbDesc = "  Driven by the pulse of music, I always know where to find the next “can’t miss” show. What defines you? Find out now.";
           break;
       case "theme-thoroughbred.php":
-          $fbDesc = "I am… THOROUGHBRED. An equestrian enthusiast at heart and the pinnacle of all things “proper.” What defines you? Find out now.";
+          $fbTitle = "I am… THOROUGHBRED.";
+          $fbDesc = " An equestrian enthusiast at heart and the pinnacle of all things “proper.” What defines you? Find out now.";
           break;
       case "theme-vineyard.php":
-          $fbDesc = "I am… VINEYARD.  A luxury tastemaker who admires the rich and storied appeal of the vintner’s world.  What defines you? Find out now.";
+          $fbTitle = "I am… VINEYARD.";
+          $fbDesc = "  A luxury tastemaker who admires the rich and storied appeal of the vintner’s world.  What defines you? Find out now.";
           break;
       default:
           $fbDesc = "Difficult to please, but love the spotlight. What defines you? Find out now.";
@@ -46,13 +54,12 @@
   <!-- Facebook Open Graph -->
   <meta property="og:url" content="<?php echo $pageUrl; ?>" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Black Label" />
+  <meta property="og:title" content="<?php echo $fbTitle; ?>" />
   <meta property="og:description" content="<?php echo $fbDesc; ?>" />
   <meta property="og:image" content="<?php echo $fbImage; ?>" />
   <meta property="og:image:width" content="367" />
   <meta property="og:image:height" content="367" />
   <meta property="fb:app_id" content="1798124750444148" />
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>

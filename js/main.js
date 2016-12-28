@@ -1,8 +1,8 @@
 $(document).ready(function(){
   var page = window.location.href;
   var name = page.match(/([^\/]*)\/*$/)[1];
+  var file = page.match(/([^\/]+)(?=\.\w+$)/)[0];
   var exploreUrl, themeClass;
-
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
     FB.init({
@@ -12,7 +12,6 @@ $(document).ready(function(){
     $('#loginbutton,#feedbutton').removeAttr('disabled');
     FB.getLoginStatus();
   });
-
   $('.share').on('click', function(){
     FB.ui({
       method: 'share',
@@ -22,7 +21,6 @@ $(document).ready(function(){
     }, function(response){});
   }); //end share
   
-
   switch (name){
     case "theme-center-stage.php":
       exploreUrl =  "http://www.lincoln.com/blacklabel/centerstage/";

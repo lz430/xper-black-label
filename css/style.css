@@ -354,7 +354,7 @@ h6 {
   float: right;
 }
 .theme .grid-container .row .col50 img:nth-of-type(2) {
-  margin-top: 15px;
+  margin-top: 17px;
 }
 .share-container {
   background: #000;
@@ -397,6 +397,9 @@ h6 {
   text-align: center;
   text-transform: uppercase;
 }
+.share-container .flex li.share:hover {
+  cursor: pointer;
+}
 .share-container .flex li.share img {
   display: block;
   margin: 0 auto 10px;
@@ -408,4 +411,4 @@ h6 {
   text-align: center;
   text-transform: uppercase;
 }
-
+
