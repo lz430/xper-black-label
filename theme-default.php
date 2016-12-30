@@ -15,15 +15,25 @@
   <meta property="og:image" content="http://430designs.com/xperience/black-label-app/images/logo-black.png" />
   <meta property="og:image:width" content="250" />
   <meta property="og:image:height" content="63" />
-  <meta property="fb:app_id" content="1798124750444148" />
+  <meta property="fb:app_id" content="243271086111491" />
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- GA Tracking-->
+  <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-69403202-6', 'auto');
+     ga('send', 'pageview');
+  </script>
 </head>
 <body ng-app="black-label" ng-controller="MainController" style="overflow-x: hidden;"> 
   <script>
     window.fbAsyncInit = function() {
       FB.init({
-        appId      : '1798124750444148',
+        appId      : '243271086111491',
         xfbml      : true,
         version    : 'v2.8'
       });
