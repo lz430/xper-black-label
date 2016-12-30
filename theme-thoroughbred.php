@@ -15,7 +15,7 @@
   <meta property="og:image" content="http://430designs.com/xperience/black-label-app/images/share/theme-thoroughbred.jpg" />
   <meta property="og:image:width" content="367" />
   <meta property="og:image:height" content="367" />
-  <meta property="fb:app_id" content="243271086111491" />
+  
   
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">

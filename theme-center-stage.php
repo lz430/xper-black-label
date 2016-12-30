@@ -8,14 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
   
   <!-- Facebook Open Graph -->
-  <meta property="og:url" content="http://430designs.com/xperience/black-label-app/theme-center-stage.php" />
+  <meta property="og:url" content="http://lincolnblacklabelapp.com/black-label-app/theme-center-stage.php" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Center Stage" />
   <meta property="og:description" content="Testing" />
-  <meta property="og:image" content="http://430designs.com/xperience/black-label-app/images/logo-black.png" />
+  <meta property="og:image" content="http://lincolnblacklabelapp.com/black-label-app/images/logo-black.png" />
   <meta property="og:image:width" content="250" />
   <meta property="og:image:height" content="63" />
-  <meta property="fb:app_id" content="243271086111491" />
   
   <link rel="stylesheet" type="text/css" href="css/ngswippy.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">

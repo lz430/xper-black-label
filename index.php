@@ -61,7 +61,6 @@
   <meta property="og:image" content="<?php echo $fbImage; ?>" />
   <meta property="og:image:width" content="367" />
   <meta property="og:image:height" content="367" />
-  <meta property="fb:app_id" content="243271086111491" />
   
   <link rel="stylesheet" href="css/style.css">
 
